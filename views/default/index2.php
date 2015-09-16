@@ -24,7 +24,7 @@
 
 
     <section class="start is-active">
-        <button class="button-enter js-enter-game">i律师</button>
+        <button class="button-enter js-enter-game">青春在线创投基金</button>
     </section>
 
 

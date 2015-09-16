@@ -10,7 +10,7 @@ if (!defined('IN_PROVERB')) {
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
-    <title>i律师</title>
+    <title>青春在线创投基金</title>
     <link href="views/admin/css/reset.css" rel="stylesheet" type="text/css"/>
     <link href="views/admin/css/zh-cn-system.css" rel="stylesheet" type="text/css"/>
     <link href="views/admin/css/dialog.css" rel="stylesheet" type="text/css"/>

@@ -15,7 +15,7 @@ if (isset($_REQUEST['GLOBALS']) OR isset($_FILES['GLOBALS'])) {
 	exit('Request tainting attempted.');
 }
 
-define('VERSION','I律师_1.0');
+define('VERSION','青春在线创投基金_1.0');
 define('BIDCMS_CLIENT_SESSION','proverb');
 require(ROOT_PATH.'/data/config.inc.php');
 header("Content-type:text/html;charset=".$proverbcharset);

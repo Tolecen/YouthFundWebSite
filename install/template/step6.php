@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD>
-<title>i律师-安装向导第五步,基本信息</title>
+<title>青春在线创投基金-安装向导第五步,基本信息</title>
 <META http-equiv=X-UA-Compatible content=IE=EmulateIE7>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <META http-equiv=expires content=0>
@@ -20,7 +20,7 @@
 <form method="post" action="index.php?step=7" id="loginform" name="loginform">
 	<p>
 		<label>网站名<br>
-		<input type="text" tabindex="10" size="20" class="input" id="user_login" name="site_title" value="I律师"></label>
+		<input type="text" tabindex="10" size="20" class="input" id="user_login" name="site_title" value="青春在线创投基金"></label>
 	</p>
 	<p>
 		<label>网站地址<br>

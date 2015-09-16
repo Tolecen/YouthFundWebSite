@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD>
-<title>i律师-安装完成</title>
+<title>青春在线创投基金-安装完成</title>
 <META http-equiv=X-UA-Compatible content=IE=EmulateIE7>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <META http-equiv=expires content=0>

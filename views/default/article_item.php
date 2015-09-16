@@ -44,7 +44,7 @@
     <div class="s3-center font17">
         <?php echo $article['topic_desc'];?>
     </div>
-    <div class="copyright"><div style="padding-top: 25px;">Copyright©2013-2015 i律师.All Rights Reserved.</div></div>
+    <div class="copyright"><div style="padding-top: 25px;">Copyright©2013-2015 青春在线创投基金.All Rights Reserved.</div></div>
 </div>
 
 </body>
