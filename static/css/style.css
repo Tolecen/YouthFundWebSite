@@ -906,7 +906,8 @@ i.flickr{
 	font-size:1.1em;
 	font-weight:500;
 	margin-top:1em;
-	line-height:1.5em;
+	line-height:1.2em;
+    text-align: center;
 	width:85%;
 }
 .footer-top-left p span {

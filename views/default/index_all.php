@@ -241,9 +241,15 @@
 	<div class="footer">
 			<div class="footer-top">
 			<div class="container">
-				<div class="col-md-9 footer-top-left">
-					<a href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/main-logo.jpg" alt="" /></a>
-					<p><span>Little Neko</span> is a web design and development studio. We build responsive HTML5 and CSS3 templates, integrating best web design practises and up-to-date web technologies to create great user experiences. We love what we do and we hope you too !</p>
+				<div class="col-md-2 footer-top-left">
+					<a href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/wqcode.jpg" alt="" width="150" /></a>
+					<p>扫描</p>
+					<p>关注官方微信</p>
+				</div>
+				<div class="col-md-2 footer-top-left">
+					<a href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/wqcode.jpg" alt="" width="150" /></a>
+					<p>扫描</p>
+					<p>关注官方微博</p>
 				</div>
 				<div class="col-md-3 footer-top-right">
 					<h5>联系我们</h5>
@@ -264,7 +270,9 @@
 				</div>
 				<div class="clearfix"></div>
 				</div>
+
 			</div>
+        <div class="clearfix" style="height: 60px; text-align: center; padding-top: 20px">Copyright©2013-2015 青春在线创业基金会.All Rights Reserved.</div>
 	</div>
 	<script type="text/javascript">
 						$(document).ready(function() {
