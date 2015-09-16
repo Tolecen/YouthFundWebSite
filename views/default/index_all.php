@@ -183,26 +183,32 @@
                     <span></span>
                 </div>
                 <div class="works-section-grids">
-                    <div class="col-md-3 works-section-grid">
+                    <div class="col-md-2 works-section-grid">
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar001.jpg" alt="" style="border-radius: 268px" />
                         <h4>刘杰</h4>
                         <p>Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。 Donec欧盟拉克丝aliquam，的Pretium SAPIEN UT，scelerisque turpis。 </p>
                         <a href="#"><i class="more"></i>更多</a>
                     </div>
-                    <div class="col-md-3 works-section-grid">
+                    <div class="col-md-2 works-section-grid">
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar002.jpg" alt="" style="border-radius: 268px" />
                         <h4>刘杰</h4>
                         <p>Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。 Donec欧盟拉克丝aliquam，的Pretium SAPIEN UT，scelerisque turpis。 </p>
                         <a href="#"><i class="more"></i>更多</a>
                     </div>
-                    <div class="col-md-3 works-section-grid">
+                    <div class="col-md-2 works-section-grid">
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar003.jpg" alt="" style="border-radius: 268px" />
                         <h4>刘杰</h4>
                         <p>Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。 Donec欧盟拉克丝aliquam，的Pretium SAPIEN UT，scelerisque turpis。 </p>
                         <a href="#"><i class="more"></i>更多</a>
                     </div>
-                    <div class="col-md-3 works-section-grid">
+                    <div class="col-md-2 works-section-grid">
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar004.jpg" alt="" style="border-radius: 268px" />
+                        <h4>刘杰</h4>
+                        <p>Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。 Donec欧盟拉克丝aliquam，的Pretium SAPIEN UT，scelerisque turpis。 </p>
+                        <a href="#"><i class="more"></i>更多</a>
+                    </div>
+                    <div class="col-md-2 works-section-grid">
+                        <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar005.jpg" alt="" style="border-radius: 268px" />
                         <h4>刘杰</h4>
                         <p>Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。 Donec欧盟拉克丝aliquam，的Pretium SAPIEN UT，scelerisque turpis。 </p>
                         <a href="#"><i class="more"></i>更多</a>
