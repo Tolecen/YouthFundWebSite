@@ -17,7 +17,7 @@ class index_controller
 
     function index_action()
     {
-        $topics = getAllTopics();
+//        $topics = getAllTopics();
         include template('index_all');
     }
     function cate_action()
