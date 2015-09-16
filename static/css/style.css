@@ -1,7 +1,7 @@
 body{
 	padding:0;
 	margin:0;
-	font-family: 'Open Sans', sans-serif;
+	font-family: '微软雅黑', '圆体', 'Open Sans', sans-serif;
 	background:#fff;
 }
 body a{
@@ -34,11 +34,20 @@ label{
 .copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
 /*-----start-header----*/
 .logo{
-	float:left;
+    position: absolute;
+    left: 100px;
 	margin-top: 2.25em;
 }
 .top-menu{
-	float:right;
+    position: absolute;
+    right: 100px;
+    margin-top: 2.25em;
+}
+.menu{
+    float: left;
+    height: 109px;
+    width: 100px;
+    margin-top: 2.25em;
 }
 .top-menu ul li{
 	display:inline-block;
@@ -48,7 +57,7 @@ label{
 	text-decoration:none;
 	color:#777777;
 	text-transform:uppercase;
-	padding:1.3em 0.85em;
+    padding:1.8em 1.85em;
 	float:left;
 	font-size:1.2em;
 	font-weight:400;
@@ -56,14 +65,14 @@ label{
 .top-menu ul li a.active{
 	color:#fff;
 	background:#44A9FA;
-	padding:1.3em 0.85em;
+	padding:1.8em 1.85em;
 }
 .top-menu ul li a:hover{
 	color:#fff;
 	background:#44A9FA;
 }
 .banner{
-	background: url('../images/slider_bg.jpg') no-repeat 0px 0px;
+	background: url('../images/main_bigpic1.png') no-repeat 0px 0px;
 	background-size:cover;
 	min-height:550px;
 }
@@ -87,6 +96,15 @@ label{
 	line-height:1.5em;
 }
 .purchase-left h4 span{
+	font-weight:600;
+}
+.purchase-left h1{
+	color:#fff;
+	font-size:3.65em;
+	font-weight:300;
+	line-height:1.5em;
+}
+.purchase-left h1 span{
 	font-weight:600;
 }
 .purchase-right a{
@@ -160,6 +178,8 @@ img.readmore {
 }
 .info p{
 	color:#fff;
+    height: 120px;
+    overflow: hidden;
 	font-weight:400;
 	font-size:0.9em;
 	line-height:1.6em;
@@ -180,9 +200,11 @@ img.readmore {
 }
 .services-section{
 	padding:1em 0 5em 0;
+    background-color: #FAD8FD;
+    padding-top: 50px;
 }
 .services-section-head h3{
-	color:#333333;
+	color:#777774;
 	font-size:3.3em;
 	font-weight:300;
 	text-transform:uppercase;
@@ -204,6 +226,57 @@ img.readmore {
 .services-section-head{
 	margin-bottom:1em;
 }
+
+.services-right {
+    float: right;
+    margin-top: 60px;
+    margin-right: 200px;
+}
+
+.services-right a{
+    color:#888888;
+    font-size:1.5em;
+    font-weight:500;
+    padding:0.7em 1em;
+    border:2px solid #888888;
+    border-radius:5px;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+.services-right a img {
+    margin: 0 10px 0 0;
+}
+
+.services-right a:hover {
+    background:#000;
+    border:2px solid #000;
+}
+
+.services-left {
+    float: left;
+    margin-top: 60px;
+    margin-left: 200px;
+}
+
+.services-left a{
+    color:#888888;
+    font-size:1.5em;
+    font-weight:500;
+    padding:0.7em 1em;
+    border:2px solid #888888;
+    border-radius:5px;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+.services-left a img {
+    margin: 0 10px 0 0;
+}
+
+.services-left a:hover {
+    background:#000;
+    border:2px solid #000;
+}
+
 .icon-text h5{
 	color:#333333;
 	font-size:1.8em;
@@ -414,10 +487,11 @@ i.c{
 }
 .about-section-grid p {
 	color:#888888;
-	font-size:1.2em;
+	font-size:1.0em;
 	font-weight:400;
 	line-height:1.6em;
 	margin:10px 0;
+    text-indent: 2em;
 }
 .about-section-head h3{
 	color:#333333;
@@ -443,7 +517,7 @@ i.c{
 	margin-bottom:4em;
 }
 .mobile{
-	background:url('../images/mobile-bg.jpg') no-repeat 0px 0px;
+	background:url('../images/main_sanrenchenghu.png') no-repeat 0px 0px;
 	background-size:cover;
 	min-height:340px;
 	padding-top:5em;
@@ -622,7 +696,8 @@ i.c{
 	color:#222222;
 	font-size:1.5em;
 	font-weight:600;
-	margin:15px 0 10px 0;
+	margin:25px 0 10px 0;
+    text-align: center;
 }
 .works-section-grid p {
 	color:#777777;
@@ -786,7 +861,7 @@ i.flickr{
 	margin-bottom:5em;
 }
 .map{
-	width:100%:
+	width:100%;
 }
 .map iframe{
 	min-height:400px;
@@ -845,7 +920,7 @@ i.flickr{
 }
 .footer-top-right ul li p{
 	color:#777777;
-	font-size:1em;
+	font-size:1.2em;
 	font-weight:600;
 }
 .footer-top-right h5{
@@ -856,7 +931,7 @@ i.flickr{
 }
 .footer-top-right ul li a {
 	color:#44A9FA;
-	font-size:1em;
+	font-size:1.2em;
 	font-weight:400;
 }
 i.location {
@@ -1528,7 +1603,7 @@ i.more{
 	}
 	.news-section-head h3, .plan-section-head h3, .services-section-head h3, .about-section-head h3, .works-section-head h3, .team-section-head h3, .contact-section-head h3 {
 		font-size: 1.9em;
-	`	letter-spacing: 0px;
+        letter-spacing: 0px;
 	}
 	.news-section-head p, .services-section-head p, .about-section-head p, .works-section-head p {
 		font-size: 1.1em;
