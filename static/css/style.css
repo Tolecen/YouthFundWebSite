@@ -35,12 +35,12 @@ label{
 /*-----start-header----*/
 .logo{
     position: absolute;
-    left: 100px;
+    left: 70px;
 	margin-top: 2.25em;
 }
 .top-menu{
     position: absolute;
-    right: 100px;
+    right: 70px;
     margin-top: 2.25em;
 }
 .menu{
@@ -86,7 +86,7 @@ label{
 	padding: 29px 0 0 0;
 }
 .purchase{
-	padding:4.5em 0;
+	padding:3.0em 0;
 	background:#44A9FA;
 }
 .purchase-left h4{
@@ -111,7 +111,7 @@ label{
 	color:#fff;
 	font-size:1.5em;
 	font-weight:500;
-	padding:0.7em 1em;
+	padding:0.7em 2em;
 	border:2px solid #fff;
 	border-radius:5px;
 	text-decoration:none;
@@ -226,43 +226,22 @@ img.readmore {
 .services-section-head{
 	margin-bottom:1em;
 }
-
-.services-right {
-    float: right;
-    margin-top: 60px;
-    margin-right: 200px;
-}
-
-.services-right a{
-    color:#888888;
-    font-size:1.5em;
-    font-weight:500;
-    padding:0.7em 1em;
-    border:2px solid #888888;
-    border-radius:5px;
-    text-decoration:none;
-    text-transform:uppercase;
-}
-.services-right a img {
-    margin: 0 10px 0 0;
-}
-
-.services-right a:hover {
-    background:#000;
-    border:2px solid #000;
+.services-section-grids {
+    text-align: center;
 }
 
 .services-left {
     float: left;
     margin-top: 60px;
-    margin-left: 200px;
+    text-align: center;
+    padding: 0em;
 }
 
 .services-left a{
     color:#888888;
     font-size:1.5em;
     font-weight:500;
-    padding:0.7em 1em;
+    padding:0.7em 2em;
     border:2px solid #888888;
     border-radius:5px;
     text-decoration:none;
@@ -517,18 +496,35 @@ i.c{
 	margin-bottom:4em;
 }
 .mobile{
-	background:url('../images/main_sanrenchenghu.png') no-repeat 0px 0px;
+	background:url('../images/main_sanrenchenghu.jpg') no-repeat 0px 0px;
 	background-size:cover;
 	min-height:340px;
-	padding-top:5em;
+	padding:3em 0 2em 0;
 }
-.mobile h3{
+.mobile h1{
 	color:#fff;
-	font-size:3.3em;
+	font-size:5.3em;
 	font-weight:300;
 	text-transform:uppercase;
 	letter-spacing:5px;
 }
+.mobile h3{
+	color:#fff;
+	font-size:2.0em;
+	font-weight:300;
+	text-transform:uppercase;
+	letter-spacing:5px;
+    margin-top: 1.0em;
+}
+
+.mobile a {
+    color: #fff;
+    text-decoration: none;
+}
+.mobile a:hover {
+    color: #fff;
+}
+
 .mobile img{
 	margin-bottom:2em;
 }
@@ -898,6 +894,14 @@ i.flickr{
 .footer-top-left{
 	float:left;
 }
+.footer-top-left a{
+    width: 100%;
+    text-align: center;
+}
+.footer-top-left a img{
+    width: 100%;
+    text-align: center;
+}
 .footer-top-right{
 	float:right;
 }
@@ -908,7 +912,6 @@ i.flickr{
 	margin-top:1em;
 	line-height:1.2em;
     text-align: center;
-	width:85%;
 }
 .footer-top-left p span {
 	color:#44A9FA;

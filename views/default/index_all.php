@@ -165,10 +165,10 @@
 				</div>
 				<div class="services-section-grids">
 
-                    <div class="services-left">
+                    <div class="col-md-6 services-left">
                         <a href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/p-3.png" alt="" width="30" />高校项目</a>
                     </div>
-                    <div class="services-right">
+                    <div class="col-md-6 services-left">
                         <a href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/p-2.png" alt="" width="30" />社会项目</a>
                     </div>
 					<div class="clearfix"></div>
@@ -186,31 +186,31 @@
                     <div class="col-md-2 works-section-grid">
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar001.jpg" alt="" style="border-radius: 268px" />
                         <h4>刘杰</h4>
-                        <p>Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。 Donec欧盟拉克丝aliquam，的Pretium SAPIEN UT，scelerisque turpis。 </p>
+                        <p>曾任搜狐汽车事业部区域内容总监、搜狐移动新媒体专业顾问，是笨鸟网、车图腾创始人，现任AutoKol联合创始人、媒体事业部总经理，青春在线奖学金创始发起人、投资人...</p>
                         <a href="#"><i class="more"></i>更多</a>
                     </div>
                     <div class="col-md-2 works-section-grid">
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar002.jpg" alt="" style="border-radius: 268px" />
-                        <h4>刘杰</h4>
-                        <p>Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。 Donec欧盟拉克丝aliquam，的Pretium SAPIEN UT，scelerisque turpis。 </p>
+                        <h4>伏彦</h4>
+                        <p>曾任清华大学中国学术期刊杂志社总编室编辑、奥琦玮信息科技（北京）有限公司市场营销部经理。现任翠辉珠宝有限公司董事长兼总经理，翡翠玉石论坛、翡翠之家、翠辉珠宝创始人，是青春在线奖学金创始发起人、投资人... </p>
                         <a href="#"><i class="more"></i>更多</a>
                     </div>
                     <div class="col-md-2 works-section-grid">
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar003.jpg" alt="" style="border-radius: 268px" />
-                        <h4>刘杰</h4>
-                        <p>Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。 Donec欧盟拉克丝aliquam，的Pretium SAPIEN UT，scelerisque turpis。 </p>
+                        <h4>李燕</h4>
+                        <p>曾任香港成报传媒集团香港成报网总编、搜狐新闻客户端用户运营主管、搜狐集团市场部公关主管、尽膳口福连锁餐饮营运总裁、疯狂洗车联合创始人、COO，是自媒体天方燕谈创建者、腾讯OMG（网络媒体事业群）专家顾问...</p>
                         <a href="#"><i class="more"></i>更多</a>
                     </div>
                     <div class="col-md-2 works-section-grid">
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar004.jpg" alt="" style="border-radius: 268px" />
-                        <h4>刘杰</h4>
-                        <p>Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。 Donec欧盟拉克丝aliquam，的Pretium SAPIEN UT，scelerisque turpis。 </p>
+                        <h4>马智</h4>
+                        <p>曾任搜狐网搜狐教育频道编辑、腾讯网腾讯教育频道编辑，腾讯精品课运营负责人。现为青春在线创投基金合伙人，北京爱天平信息技术服务有限公司股东、I律师联合创始人、COO，是青春在线奖学金创始发起人、投资人...</p>
                         <a href="#"><i class="more"></i>更多</a>
                     </div>
                     <div class="col-md-2 works-section-grid">
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar005.jpg" alt="" style="border-radius: 268px" />
-                        <h4>刘杰</h4>
-                        <p>Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。 Donec欧盟拉克丝aliquam，的Pretium SAPIEN UT，scelerisque turpis。 </p>
+                        <h4>王嘉</h4>
+                        <p>曾任淄博实验中学教师，是国家认证理财师。现任淄博卡哥投资咨询有限公司总经理、北京爱天平信息技术服务有限公司股东、I律师联合创始人、CFO，是青春在线奖学金创始发起人、投资人...</p>
                         <a href="#"><i class="more"></i>更多</a>
                     </div>
                     <div class="clearfix"></div>
@@ -219,6 +219,9 @@
         </div>
         <div class="mobile text-center">
             <div class="container">
+                <h1>三人成虎</h1>
+                <h3>一个投资人与创业者的早餐、午餐或晚餐会</h3>
+                <h3><a href="#">查看详情>></a></h3>
             </div>
         </div>
 		<div class="about-section" id="about">
