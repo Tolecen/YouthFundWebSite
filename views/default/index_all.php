@@ -165,10 +165,10 @@
 				</div>
 				<div class="services-section-grids">
 
-                    <div class="col-md-6 services-left">
+                    <div class="col-md-6 services-left" <?php if(isMobile()){?> style="float: none" <?php }?>>
                         <a href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/p-3.png" alt="" width="30" />高校项目</a>
                     </div>
-                    <div class="col-md-6 services-left">
+                    <div class="col-md-6 services-left" <?php if(isMobile()){?> style="float: none" <?php }?>>
                         <a href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/p-2.png" alt="" width="30" />社会项目</a>
                     </div>
 					<div class="clearfix"></div>
