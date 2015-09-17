@@ -34,21 +34,20 @@ label{
 .copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
 /*-----start-header----*/
 .logo{
-    position: absolute;
-    left: 70px;
-	margin-top: 2.25em;
+    float:left;
+    width: 300px;
+    margin-top: 2.25em;
+}
+.menu {
+    margin-top: 1.4em;
 }
 .top-menu{
-    position: absolute;
-    right: 70px;
-    margin-top: 2.25em;
+    float:right;
 }
-.menu{
-    float: left;
-    height: 109px;
-    width: 100px;
-    margin-top: 2.25em;
+.top-menu{
+    float:right;
 }
+
 .top-menu ul li{
 	display:inline-block;
 	float:left;
