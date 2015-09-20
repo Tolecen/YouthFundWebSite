@@ -30,14 +30,6 @@
     </script>
     <script type="text/javascript" src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/js/move-top.js"></script>
     <script type="text/javascript" src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/js/easing.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event){
-                event.preventDefault();
-                $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-            });
-        });
-    </script>
 
 </head>
 <body>
@@ -77,14 +69,13 @@
     <div class="container">
         <div class="about-section-head text-center">
             <h3>李燕</h3>
-            <p style="font-size: 1.2em;">曾任香港成报传媒集团香港成报网总编、搜狐新闻客户端用户运营主管、搜狐集团市场部公关主管、尽膳口福连锁餐饮营运总裁、疯狂洗车联合创始人、COO，是自媒体天方燕谈创建者、腾讯OMG（网络媒体事业群）专家顾问...</p>
             <span></span>
         </div>
         <div class="about-section-grids">
             <div class="col-md-3 about-section-grid">
-                <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar001.jpg" alt="" style="border-radius: 268px" />
+                <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar003.jpg" alt="" style="border-radius: 268px" />
             </div>
-            <div class="col-md-9 about-section-grid" style="font-size: 1.4em">
+            <div class="col-md-9 about-section-grid" style="font-size: 1.1em">
                 <p>男，四川乐山人。</p>
                 <p>山东理工大学法学院2004级社会工作专业本科毕业，法学学士。大学期间，担任山东理工大学学生工作部（处）青春在线网站第七届站长、山东理工大学党委宣传部大学生记者协会第二届主席、山东理工大学团委《理工青年》报创刊编委、副主编、教育部中国大学生在线发展协会山东理工大学分会首届会长。</p>
                 <p>曾任乐山市更生学校团委书记、高中部2011届文科8班班主任、教师，包头宝林生态工程有限公司运营总监、广州百道网络科技有限公司总经理、香港成报传媒集团香港成报网总编、搜狐新闻客户端用户运营主管、搜狐集团市场部公关主管、尽膳口福连锁餐饮营运总裁、疯狂洗车联合创始人、COO，是自媒体天方燕谈创建者、腾讯OMG（网络媒体事业群）专家顾问、冰帆海淘营销顾问、枣到了营销顾问、抽屉新热榜战略顾问、青岛日报报业集团掌控传媒新媒体顾问、虚拟货币交易平台OKCoin媒体顾问。也是搜狐集团认证讲师、2013搜狐集团“创新思享汇”年度最受欢迎讲师，2013联想集团创客大赛自媒体评委、2014海尔集团海立方创客大赛评委、2014年虎嗅网年度“FM”节主持人，同时担任乐山市更生学校校友总会秘书长、山东理工大学北京青年校友会常务副秘书长。</p>
@@ -94,42 +85,7 @@
         </div>
     </div>
 </div>
-<div class="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="col-md-2 footer-top-left">
-                <a href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/wqcode.jpg" alt="" width="150" /></a>
-                <p>扫描</p>
-                <p>关注官方微信</p>
-            </div>
-            <div class="col-md-2 footer-top-left">
-                <a href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/wqcode.jpg" alt="" width="150" /></a>
-                <p>扫描</p>
-                <p>关注官方微博</p>
-            </div>
-            <div class="col-md-3 footer-top-right">
-                <h5>联系我们</h5>
-                <ul>
-                    <li>
-                    <li><i class="phone"></i></li>
-                    <li><p>点击关注新浪微博 </p></li>
-                    </li>
-                </ul>
-                <ul>
-                    <li><i class="phone"></i></li>
-                    <li><p>256.478.3252 </p></li>
-                </ul>
-                <ul>
-                    <li><i class="msg"></i></li>
-                    <li><a href="main-to:example@mail.com">little@little-neko.com</a></li>
-                </ul>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-
-    </div>
-    <div class="clearfix" style="height: 60px; text-align: center; padding-top: 20px">Copyright©2013-2015 青春在线创业基金会.All Rights Reserved.</div>
-</div>
+<?php include("footer.php"); ?>
 <script type="text/javascript">
     $(document).ready(function() {
         /*

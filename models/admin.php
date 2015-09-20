@@ -310,6 +310,9 @@ class admin {
             $data ['topic_intro'] = $_POST['topic_intro'];
             $data ['file_id'] = $_POST['file_id'];
 
+            if(intval($data['file_id']) < 1)
+                $data ['file_id'] = $_POST['tag_file_id'];
+
 
             if ($updateid > 0) {
                 if ($media_mod->UpdateData ( $data, 'and topic_id=' . $updateid )) {

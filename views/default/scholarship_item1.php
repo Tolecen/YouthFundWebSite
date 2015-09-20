@@ -30,14 +30,6 @@
     </script>
     <script type="text/javascript" src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/js/move-top.js"></script>
     <script type="text/javascript" src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/js/easing.js"></script>
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event){
-                event.preventDefault();
-                $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-            });
-        });
-    </script>
 
 </head>
 <body>
@@ -77,14 +69,13 @@
     <div class="container">
         <div class="about-section-head text-center">
             <h3>伏彦</h3>
-            <p style="font-size: 1.2em;">曾任清华大学中国学术期刊杂志社总编室编辑、奥琦玮信息科技（北京）有限公司市场营销部经理。现任翠辉珠宝有限公司董事长兼总经理，翡翠玉石论坛、翡翠之家、翠辉珠宝创始人，是青春在线奖学金创始发起人、投资人...</p>
             <span></span>
         </div>
         <div class="about-section-grids">
             <div class="col-md-3 about-section-grid">
-                <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar001.jpg" alt="" style="border-radius: 268px" />
+                <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar002.jpg" alt="" style="border-radius: 268px" />
             </div>
-            <div class="col-md-9 about-section-grid" style="font-size: 1.4em">
+            <div class="col-md-9 about-section-grid" style="font-size: 1.1em">
                 <p>男，云南昆明人。</p>
                 <p>山东理工大学原物理学院2003级教育技术学专业毕业，理学学士。大学期间，担任学院新闻部部长、山东理工大学学生工作部（处）青春在线第六届共建部主任、山东理工大学报社学生记者，兼任“中国教育在线”通讯员、“中国青年网”通讯员、中国青年作家协会会员、山东省青年作家协会会员等职，获第五届全国“挑战杯”大学生创业计划大赛山东省一等奖等奖励。</p>
                 <p>曾任清华大学中国学术期刊杂志社总编室编辑、奥琦玮信息科技（北京）有限公司市场营销部经理。现任翠辉珠宝有限公司董事长兼总经理，翡翠玉石论坛、翡翠之家、翠辉珠宝创始人，是青春在线奖学金创始发起人、投资人。</p>
@@ -93,42 +84,7 @@
         </div>
     </div>
 </div>
-<div class="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="col-md-2 footer-top-left">
-                <a href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/wqcode.jpg" alt="" width="150" /></a>
-                <p>扫描</p>
-                <p>关注官方微信</p>
-            </div>
-            <div class="col-md-2 footer-top-left">
-                <a href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/wqcode.jpg" alt="" width="150" /></a>
-                <p>扫描</p>
-                <p>关注官方微博</p>
-            </div>
-            <div class="col-md-3 footer-top-right">
-                <h5>联系我们</h5>
-                <ul>
-                    <li>
-                    <li><i class="phone"></i></li>
-                    <li><p>点击关注新浪微博 </p></li>
-                    </li>
-                </ul>
-                <ul>
-                    <li><i class="phone"></i></li>
-                    <li><p>256.478.3252 </p></li>
-                </ul>
-                <ul>
-                    <li><i class="msg"></i></li>
-                    <li><a href="main-to:example@mail.com">little@little-neko.com</a></li>
-                </ul>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-
-    </div>
-    <div class="clearfix" style="height: 60px; text-align: center; padding-top: 20px">Copyright©2013-2015 青春在线创业基金会.All Rights Reserved.</div>
-</div>
+<?php include("footer.php"); ?>
 <script type="text/javascript">
     $(document).ready(function() {
         /*
