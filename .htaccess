@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteBase /
+RewriteRule ^article/([0-9]+)(/*)$ YouthFundWebSite/index.php?con=article&act=item&id=$1
+RewriteRule ^article/all(/*)$ YouthFundWebSite/index.php?con=article&act=all
+RewriteRule ^scholarship/([0-9]+)(/*)$ YouthFundWebSite/index.php?con=scholarship&act=item&id=$1
+RewriteRule ^scholarship/all(/*)$ YouthFundWebSite/index.php?con=scholarship&act=all
+
