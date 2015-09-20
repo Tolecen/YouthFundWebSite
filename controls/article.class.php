@@ -24,10 +24,15 @@ class article_controller
     {
         $id=trim($_GET['id']);
         $article=getTopic($id);
-        if(isMobile())
-            include template('article_item_m');
-        else
+//        if(isMobile())
+//            include template('article_item_m');
+//        else
             include template('article_item');
+    }
+    function all_action()
+    {
+        $topics = getAllTopics();
+        include template('article_all');
     }
 
 }

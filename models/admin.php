@@ -254,6 +254,14 @@ class admin {
         {
             $data_mod->DeleteData('1 and topic_id='.$id);
             sheader ( 'index.php?con=' . $GLOBALS ['setting'] ['adminpath'] . '&act=media', 3, '删除成功', 'redirect', true );
+        } elseif( $_REQUEST['type']=='addUse' && $id>0){
+            $data ['isused'] = 1;
+            $data_mod->UpdateData($data, 'and topic_id='.$id);
+            sheader ( 'index.php?con=' . $GLOBALS ['setting'] ['adminpath'] . '&act=media', 3, '修改成功', 'redirect', true );
+        } elseif( $_REQUEST['type']=='delUse' && $id>0){
+            $data ['isused'] = 0;
+            $data_mod->UpdateData($data, 'and topic_id='.$id);
+            sheader ( 'index.php?con=' . $GLOBALS ['setting'] ['adminpath'] . '&act=media', 3, '修改成功', 'redirect', true );
         }
         else
         {
@@ -299,6 +307,8 @@ class admin {
 
             $data ['topic_name'] = $_POST['topic_name'];
             $data ['topic_desc'] = $_POST['topic_desc'];
+            $data ['topic_intro'] = $_POST['topic_intro'];
+            $data ['file_id'] = $_POST['file_id'];
 
 
             if ($updateid > 0) {

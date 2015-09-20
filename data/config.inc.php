@@ -19,13 +19,13 @@ $proverbdbuser="root";
 $proverbdbpw="";
 
 //数据库名
-$proverbdbname="lawyer";
+$proverbdbname="youth";
 
 //数据库编码
 $proverbdbcharset="utf8";
 
 //数据表前缀
-$proverbtable_prefix="lawyer_";
+$proverbtable_prefix="youth_";
 
 //网站编码
 $proverbcharset="utf-8";

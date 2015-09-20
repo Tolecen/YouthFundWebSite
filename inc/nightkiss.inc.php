@@ -9,6 +9,7 @@ function getTopic($topic_id)
     $query = "select * from " . tname('topic') . " where topic_id=" . $topic_id;
     $topic = $db->fetch_first($query);
     if ($topic['topic_id'] > 0) {
+        $topic['file'] = getfile($topic['file_id']);
         return $topic;
     }
     return array();
@@ -22,7 +23,7 @@ function getAllTopics($cursor = 0, $container = '', $order = '', $pagesize = 20,
     if (empty($sql)) {
         $sql = "select topic_id from " . tname('topic');
         if (!empty($container)) {
-            $sql .= " where 1 and locked=0 " . $container;
+            $sql .= " where 1 " . $container;
         }
         if (!empty($order)) {
             $sql .= ' ' . $order;
@@ -39,4 +40,25 @@ function getAllTopics($cursor = 0, $container = '', $order = '', $pagesize = 20,
         }
     }
     return $topics;
+}
+
+function getfile($file_id)
+{
+    global $db, $bidcmskey;
+    $file = array();
+    if ($file_id > 0) {
+        $query = "select file_original as `key`,file_path as `path`,file_type as `type`,width,height from " . tname('file') . " where file_id=" . $file_id;
+        $file = $db->fetch_first($query);
+        if (empty($file)) {
+            $file = array("key" => $bidcmskey, "type" => "image/jpeg", "width" => "180", "height" => "180");
+        }
+    } else {
+        $file = array("key" => $bidcmskey, "type" => "image/jpeg", "width" => "180", "height" => "180");
+
+    }
+    $file['farm'] = 'farm1';
+    $file['bucket'] = 'hbimg';
+    $file['host'] = $GLOBALS['app']['scheme']."://".$GLOBALS['app']['host']."/";
+    $file['frames'] = 1;
+    return $file;
 }

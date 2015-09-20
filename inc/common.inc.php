@@ -1,5 +1,5 @@
 <?php
-//error_reporting(0);
+error_reporting(0);
 define('ROOT_PATH',str_replace('\\','/',substr(dirname(__FILE__),0,-3)));
 define('IN_PROVERB',1);
 if(PHP_VERSION < '4.1.0') {

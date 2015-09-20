@@ -5,7 +5,7 @@
 
 	$Id: getinfo.php 2010-08-24 10:42 $
 */
-//error_reporting(0);
+error_reporting(0);
 define('IN_PROVERB',1);
 
 date_default_timezone_set('Asia/Shanghai');

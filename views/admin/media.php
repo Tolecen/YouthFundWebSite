@@ -47,7 +47,7 @@ if (!defined('IN_PROVERB')) {
         <tbody>
         <?php foreach ($taglist['data'] as $key => $val) { ?>
             <TR class="tr<?php echo $key % 2; ?>" id="user<?php echo $val['topic_id']; ?>" height="50" style="height: 50px; position: relative; overflow: hidden">
-                <TD align="center">
+                <TD align="center" <?php if($val['isused'] == 1){ ?> style="color:#ff0000" <?php }?>>
                     <?php echo $val['topic_name']; ?>
                 </TD>
 
@@ -56,6 +56,13 @@ if (!defined('IN_PROVERB')) {
 
                 <TD align="center">
                     <A HREF="index.php?con=<?php echo $GLOBALS['setting']['adminpath']; ?>&act=mediamodify&updateid=<?php echo $val['topic_id']; ?>">修改</A>
+                    <?php if($val['isused'] == 0){ ?>
+                        <A HREF="index.php?con=<?php echo $GLOBALS['setting']['adminpath']; ?>&act=media&type=addUse&id=<?php echo $val['topic_id']; ?>"
+                           onclick="return confirm('确认加入首页推荐？');">首页推荐</A>
+                    <?php } else {?>
+                        <A HREF="index.php?con=<?php echo $GLOBALS['setting']['adminpath']; ?>&act=media&type=delUse&id=<?php echo $val['topic_id']; ?>"
+                           onclick="return confirm('确认加入取消推荐？');">取消推荐</A>
+                    <?php }?>
                     <A HREF="index.php?con=<?php echo $GLOBALS['setting']['adminpath']; ?>&act=media&type=del&id=<?php echo $val['topic_id']; ?>"
                        onclick="return confirm('确认删除？');">删除</A>
                 </TD>

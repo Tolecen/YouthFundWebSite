@@ -50,12 +50,12 @@
 			<span class="menu" <?php if(!isMobile()){?> style="float: left;height: 109px;width: 100px;margin-top: 2.25em;" <?php }?> ></span>
 			<div class="top-menu" <?php if(!isMobile()){?> style="position: absolute;right: 70px;margin-top: 2.25em;" <?php }?>>
 				<ul>
-					<li><a class="active scroll" href="#home"><i class="home"></i>首页</a></li>
-					<li><a class="scroll" href="#news"><div class="message"><i class="news"></i><i class="news1"></i></div>动态</a></li>
-					<li><a class="scroll" href="#service"><div class="ser"><i class="service"></i><i class="service1"></i></div>项目</a></li>
-					<li><a class="scroll" href="#works"><div class="wrk"><i class="works"></i><i class="works1"></i></div>奖学金</a></li>
-					<li><a class="scroll" href="#team"><div class="tm"><i class="team"></i><i class="team1"></i></div>三人成虎</a></li>
-					<li><a class="scroll" href="#contact"><div class="cntc"><i class="contact"></i><i class="contact1"></i></div>联系</a></li>
+					<li><a class="active scroll" href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>#home"><i class="home"></i>首页</a></li>
+					<li><a class="scroll" href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>#news"><div class="message"><i class="news"></i><i class="news1"></i></div>动态</a></li>
+					<li><a class="scroll" href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>#service"><div class="ser"><i class="service"></i><i class="service1"></i></div>项目</a></li>
+					<li><a class="scroll" href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>#works"><div class="wrk"><i class="works"></i><i class="works1"></i></div>奖学金</a></li>
+					<li><a class="scroll" href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>#team"><div class="tm"><i class="team"></i><i class="team1"></i></div>三人成虎</a></li>
+					<li><a class="scroll" href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>#contact"><div class="cntc"><i class="contact"></i><i class="contact1"></i></div>联系</a></li>
 					<div class="clearfix"></div>
 				</ul>
 				</ul>
@@ -120,38 +120,23 @@
 		<div class="news-section" id="news">
 			<div class="container">
 				<div class="news-section-head text-center">
-					<h3>新闻动态</h3>
+					<h3>新闻动态<a class="more" href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/article/all">查看更多 ></a></h3>
 					<p>我们的最新动态，投资及投资项目动态</p>
 					<span></span>
 				</div>
 				<div class="news-section-grids">
+					<?php for($i = 0; $i < count($topics); $i++){ ?>
 					<div class="col-md-4 news-section-grid">
-						<img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/n1.jpg" alt="" />
+						<img src="<?php echo $topics[$i]['file']['host'].$topics[$i]['file']['path'].$topics[$i]['file']['key'];?>" alt="" />
 						<div class="info">
-							<h5>美好的创投在此开始</h5>
-							<label>2015-09-16</label>
-							<p>公爵夫人作出了她的选择，并走掉了。 “让我们继续进行的比赛中，”王后对爱丽丝说。爱丽丝是太多害怕一句话也说不出来，但慢慢地跟着她回到槌球场。</p>
-							<a class="more" href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/go.png" class="readmore" alt="" />详 情</a>
+							<h5><?php echo $topics[$i]["topic_name"];?></h5>
+							<label><?php echo date('Y-m-d', $topics[$i]["created_time"]);?></label>
+							<p><?php echo $topics[$i]["topic_intro"];?></p>
+							<a class="more" href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/article/<?php echo $topics[$i]["topic_id"];?>"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/go.png" class="readmore" alt="" />详 情</a>
 						</div>
 					</div>
-					<div class="col-md-4 news-section-grid">
-						<img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/n2.jpg" alt="" />
-                        <div class="info">
-                            <h5>美好的创投在此开始</h5>
-                            <label>2015-09-16</label>
-                            <p>公爵夫人作出了她的选择，并走掉了。 “让我们继续进行的比赛中，”王后对爱丽丝说。爱丽丝是太多害怕一句话也说不出来，但慢慢地跟着她回到槌球场。</p>
-                            <a class="more" href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/go.png" class="readmore" alt="" />详 情</a>
-                        </div>
-					</div>
-					<div class="col-md-4 news-section-grid">
-						<img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/n3.jpg" alt="" />
-                        <div class="info">
-                            <h5>美好的创投在此开始</h5>
-                            <label>2015-09-16</label>
-                            <p>公爵夫人作出了她的选择，并走掉了。 “让我们继续进行的比赛中，”王后对爱丽丝说。爱丽丝是太多害怕一句话也说不出来，但慢慢地跟着她回到槌球场。</p>
-                            <a class="more" href="#"><img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/go.png" class="readmore" alt="" />详 情</a>
-                        </div>
-					</div>
+					<?php } ?>
+
 					<div class="clearfix"></div>
 				</div>
 			</div>
@@ -178,7 +163,7 @@
         <div class="works-section" id="works">
             <div class="container">
                 <div class="works-section-head text-center">
-                    <h3>青春在线奖学金</h3>
+                    <h3>青春在线奖学金<a class="more" href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/all">查看详情 ></a></h3>
                     <p>山东理工大学站友发起，重视创新、创业的各界人士共同投资、运营</p>
                     <span></span>
                 </div>
@@ -187,31 +172,31 @@
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar001.jpg" alt="" style="border-radius: 268px" />
                         <h4>刘杰</h4>
                         <p>曾任搜狐汽车事业部区域内容总监、搜狐移动新媒体专业顾问，是笨鸟网、车图腾创始人，现任AutoKol联合创始人、媒体事业部总经理，青春在线奖学金创始发起人、投资人...</p>
-                        <a href="#"><i class="more"></i>更多</a>
+                        <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/0"><i class="more"></i>更多</a>
                     </div>
                     <div class="col-md-2 works-section-grid">
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar002.jpg" alt="" style="border-radius: 268px" />
                         <h4>伏彦</h4>
                         <p>曾任清华大学中国学术期刊杂志社总编室编辑、奥琦玮信息科技（北京）有限公司市场营销部经理。现任翠辉珠宝有限公司董事长兼总经理，翡翠玉石论坛、翡翠之家、翠辉珠宝创始人，是青春在线奖学金创始发起人、投资人... </p>
-                        <a href="#"><i class="more"></i>更多</a>
+                        <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/1"><i class="more"></i>更多</a>
                     </div>
                     <div class="col-md-2 works-section-grid">
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar003.jpg" alt="" style="border-radius: 268px" />
                         <h4>李燕</h4>
                         <p>曾任香港成报传媒集团香港成报网总编、搜狐新闻客户端用户运营主管、搜狐集团市场部公关主管、尽膳口福连锁餐饮营运总裁、疯狂洗车联合创始人、COO，是自媒体天方燕谈创建者、腾讯OMG（网络媒体事业群）专家顾问...</p>
-                        <a href="#"><i class="more"></i>更多</a>
+                        <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/2"><i class="more"></i>更多</a>
                     </div>
                     <div class="col-md-2 works-section-grid">
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar004.jpg" alt="" style="border-radius: 268px" />
                         <h4>马智</h4>
                         <p>曾任搜狐网搜狐教育频道编辑、腾讯网腾讯教育频道编辑，腾讯精品课运营负责人。现为青春在线创投基金合伙人，北京爱天平信息技术服务有限公司股东、I律师联合创始人、COO，是青春在线奖学金创始发起人、投资人...</p>
-                        <a href="#"><i class="more"></i>更多</a>
+                        <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/3"><i class="more"></i>更多</a>
                     </div>
                     <div class="col-md-2 works-section-grid">
                         <img src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar005.jpg" alt="" style="border-radius: 268px" />
                         <h4>王嘉</h4>
                         <p>曾任淄博实验中学教师，是国家认证理财师。现任淄博卡哥投资咨询有限公司总经理、北京爱天平信息技术服务有限公司股东、I律师联合创始人、CFO，是青春在线奖学金创始发起人、投资人...</p>
-                        <a href="#"><i class="more"></i>更多</a>
+                        <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/4"><i class="more"></i>更多</a>
                     </div>
                     <div class="clearfix"></div>
                 </div>

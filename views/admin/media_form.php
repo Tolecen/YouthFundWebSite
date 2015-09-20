@@ -61,11 +61,9 @@ if (!defined('IN_PROVERB')) {
                 <td width="80" class="asdasd">摘要</td>
                 <td>
 
-                    <textarea id="topic_intro" name="topic_intro" style="width:450px; height: 100px; font-size: 14px;text-align: left">
-                        <?php if (isset($media['topic_intro'])) {
+                    <textarea id="topic_intro" name="topic_intro" style="width:450px; height: 100px; font-size: 14px;text-align: left"><?php if (isset($media['topic_intro'])) {
                             echo $media['topic_intro'];
-                        } ?>
-                    </textarea>
+                        } ?></textarea>
 
                 </td>
             </tr>
