@@ -13,7 +13,7 @@ if (!defined('IN_PROVERB')) {
 <?php include ROOT_PATH . '/views/admin/header.php'; ?>
 <link media="all" rel="stylesheet" type="text/css" href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/editer/styles/simditor.css" />
 
-<script type="text/javascript" src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/editer/scripts/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/editer/scripts/module.js"></script>
 <script type="text/javascript" src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/editer/scripts/uploader.js"></script>
 <script type="text/javascript" src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/editer/scripts/hotkeys.js"></script>
@@ -58,7 +58,7 @@ if (!defined('IN_PROVERB')) {
                 </td>
             </tr>
             <tr height="50">
-                <td width="80" class="asdasd">摘要</td>
+                <td width="80">摘要</td>
                 <td>
 
                     <textarea id="topic_intro" name="topic_intro" style="width:450px; height: 100px; font-size: 14px;text-align: left"><?php if (isset($media['topic_intro'])) {
@@ -186,18 +186,6 @@ if (!defined('IN_PROVERB')) {
         return true;
     }
 
-</script>
-
-<script type="text/javascript">
-
-    $(".delImage").click(function(){
-        alert($(this).parents(".progressWrapper"))
-        $(this).parents(".progressWrapper").remove();
-    })
-
-    $(".asdasd").click(function(){
-        alert($(this).html);
-    })
 
 </script>
 
