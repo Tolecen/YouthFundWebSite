@@ -44,11 +44,11 @@
 	<!-- header-section-starts -->
 	<div class="header">
 		<div class="container">
-			<div class="logo" <?php if(!isMobile()){?> style="position: absolute;left: 70px;margin-top: 2.25em;" <?php }?>>
+			<div class="logo" <?php if(!isMobile()){?> style="position: absolute;left: 36px;margin-top: 2.25em;" <?php }?>>
 				<a href=""><img <?php if(!isMobile()){?> width="500" <?php }else{?> width="300" <?php }?> src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/main_logo.png" alt="" /></a>
 			</div>
 			<span class="menu" <?php if(!isMobile()){?> style="float: left;height: 109px;width: 100px;margin-top: 2.25em;" <?php }?> ></span>
-			<div class="top-menu" <?php if(!isMobile()){?> style="position: absolute;right: 70px;margin-top: 2.25em;" <?php }?>>
+			<div class="top-menu" <?php if(!isMobile()){?> style="position: absolute;right: 36px;margin-top: 2.25em;" <?php }?>>
 				<ul>
 					<li><a class="active scroll" href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>#home"><i class="home"></i>首页</a></li>
 					<li><a class="scroll" href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>#news"><div class="message"><i class="news"></i><i class="news1"></i></div>动态</a></li>
