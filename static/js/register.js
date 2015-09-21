@@ -24,7 +24,7 @@ $(function () {
         });
         $(".info-box-uploaded-look").click(function(){
             var url = $("[name='upload_relative']").val();
-            var val = $(this).parent().parent('div').find("input[class^=upload_pic]").val();
+            var val = $(this).parent().parent('div').find("input[class^=upload_picimg]").val();
             $(this).attr('href',currentUrl+url+val)
         })
     }
@@ -316,6 +316,7 @@ $(function () {
                 var uploadedItemEl = $("#file-" + fileId);
                 if (uploadedItemEl.length < 1) return;
                 uploadedItemEl.append("<input type='hidden' class ='upload_pic_"+uploader.settings.mydef+"' name='upload_pic_"+uploader.settings.mydef+"' value='" + resp.file_id + "'>");
+                uploadedItemEl.append("<input type='hidden' class ='upload_picimg_"+uploader.settings.mydef+"' name='upload_pic_"+uploader.settings.mydef+"' value='" + resp.key + "'>");
                 $("#file-" + fileId + " .arm-set-album-cover").show();
                 var imgEl = $("#file-" + fileId + " img");
                 if (imgEl.length < 1) return;
