@@ -146,7 +146,7 @@
                 <h4>为您的项目申请推介或融资</h4>
             </div>
             <div class="col-md-3 purchase-right">
-                <a href="#"><img
+                <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/project"><img
                         src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/p.png"
                         alt=""/>填写资料</a>
             </div>
@@ -206,12 +206,12 @@
             <div class="services-section-grids">
 
                 <div class="col-md-6 services-left" <?php if (isMobile()) { ?> style="float: none" <?php } ?>>
-                    <a href="#"><img
+                    <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/project"><img
                             src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/p-3.png"
                             alt="" width="30"/>高校项目</a>
                 </div>
                 <div class="col-md-6 services-left" <?php if (isMobile()) { ?> style="float: none" <?php } ?>>
-                    <a href="#"><img
+                    <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/project"><img
                             src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/p-2.png"
                             alt="" width="30"/>社会项目</a>
                 </div>
@@ -293,7 +293,7 @@
 
             <h3>一个投资人与创业者的早餐、午餐或晚餐会</h3>
 
-            <h3><a href="#">查看详情>></a></h3>
+            <h3><a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/article/1448">查看详情>></a></h3>
         </div>
     </div>
     <div class="about-section" id="contact">

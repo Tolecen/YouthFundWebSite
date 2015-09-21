@@ -2218,3 +2218,146 @@ margin: 0 0px 0 0;
 width: 10%;
 }
 }
+.fl {
+    float: left;
+    display: inline;
+}
+.w100 {
+    width: 100px;
+}
+.pt30 {
+    padding-top: 30px;
+}
+.cb {
+    clear: both;
+}
+.tc {
+    text-align: center;
+}
+#reduceGg {
+    background: url("../images/icopeng.png") 0px -416px no-repeat;
+    padding-left: 24px;
+}
+#addGg {
+    background: url("../images/icopeng.png") 0px -353px no-repeat;
+    padding-left: 24px;
+    display: block;
+    height: 30px;
+}
+.cl {
+    clear: left;
+}
+
+.about-section .member_con .form-con{margin-top: 25px;display: block;width: 100%;float: left}
+.about-section .member_con .form-con h3{font-size: 16px;color: #333;font-weight: normal;line-height: 30px;text-align: right;padding-right: 8px;}
+.about-section .member_con .form-con h3 b{color: #e60012;line-height: 24px;padding-right: 5px;}
+.about-section .member_con .form-con h4{font-size: 16px;color: #333;font-weight: normal;line-height: 30px;width: 700px;}
+.about-section .member_con .form-con h4 b{color: #e60012;line-height: 24px;padding-right: 5px;}
+.about-section .member_con .form-con select{width: 200px;border:1px #e6e6e6 solid;height: 30px; }
+.about-section .member_con .form-con input{width: 254px;border:1px #e6e6e6 solid;height: 30px;line-height: 30px; }
+.about-section .member_con .form-con textarea{width: 550px;border:1px #e6e6e6 solid;height: 90px;line-height: 26px; }
+.about-section .member_con .form-con .commom{font-size: 12px;color: #999;line-height: 30px;padding-left: 8px;}
+.about-section .member_con .member_submit{margin-top: 66px;margin-left: 530px; margin-bottom: 20px}
+
+.about-section .register h2{font-size: 20px;font-weight: normal}
+.about-section .register .form-con{padding-left: 300px;}
+.about-section .register .form-con input{width: 200px;}
+.about-section .register .form-con .commom{color: #65a3dc}
+.about-section .register .form-con .ggdiv input{width: 115px;margin-right: 8px;}
+
+.hui_btn:hover, .hui_btn:focus, .hui_btn:active {
+    color: #FFFFFF;
+    background-color: #9b9ea5;
+}
+
+.user-upload-uploader {
+    float: left;
+    margin-left: 10px;
+}
+.hui_btn {
+    color: #FFFFFF;
+    background-color: #8c8f96;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn {
+    border-width: 0;
+    padding: 7px 14px;
+    font-size: 18px;
+    outline: none !important;
+    background-image: none !important;
+    filter: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+.user-upload-label {
+    width: 230px;
+}
+.reg_gz {
+    margin: 40px 0 0 380px;
+    position: relative;
+}
+.reg_gz i {
+    background: url(../images/reg_gz.png) no-repeat 0 -27px;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+.reg_gz i.active {
+    background-position: 0 -1px;
+}
+.reg_gz span {
+    position: absolute;
+    left: 30px;
+}
+
+.blue_btn:hover, .blue_btn:focus, .blue_btn:active {
+    color: #FFFFFF;
+    background-color: #5499cd;
+}
+.blue_btn {
+    color: #FFFFFF;
+    background-color: #488fcd;
+    cursor: pointer;
+}
+
+/*弹窗*/
+.dialog{
+    width:240px;
+    padding-bottom:6px;
+    background:url(../images/dialog-bottom.png) left bottom no-repeat;
+}
+.dialog .title{
+    height:20px;
+    width:240px;
+    background:url(../images/dialog-top.png) no-repeat;
+}
+.dialog .content{
+    padding-top:15px;
+    font-size: 14px;
+    color:#6e7278;
+    text-align: center;
+    padding-bottom:10px;
+    background: #FFF;
+}
+.dialog .content img{
+    margin-bottom:15px;
+}
+.dialog .btns{
+    background: #FFF;
+    text-align: center;
+    color:#40bdf7;
+    font-size: 16px;
+    border-top:1px solid #a0ddfb;
+    padding:12px 0 2px;
+}
+.dialog .btns a{
+    color:#40bdf7;
+}
+/*弹窗end*/

@@ -1,5 +1,5 @@
 $(function () {
-    var currentUrl = "http://182.254.159.182/photos/";
+    var currentUrl = "http://192.168.20.157/youth/";
     // 图片hover 事件
     function imgHover(){
         $('.info-box-uploaded-item').hover(function(){
@@ -29,9 +29,9 @@ $(function () {
         })
     }
     function showDialog(msg, flag) {
-        var str = '<div class="dialog"><div class="title"></div><div class="content"><p><img src="/images/web/tou.gif" /></p><p>' + msg + '</p></div><div class="btns"><a class="close" href="javascript:void(0)">确定</a></div></div>'
+        var str = '<div class="dialog"><div class="title"></div><div class="content"><p><img src="/static/images/tou.gif" /></p><p>' + msg + '</p></div><div class="btns"><a class="closeit" href="javascript:void(0)">确定</a></div></div>'
         if (flag) {
-            var str = '<div class="dialog"><div class="title"></div><div class="content"><p><img src="/images/web/success_msg.jpg" /></p><p>' + msg + '</p></div><div class="btns"><a class="close" href="javascript:void(0)">确定</a></div></div>'
+            var str = '<div class="dialog"><div class="title"></div><div class="content"><p><img src="/static/success_msg.jpg" /></p><p>' + msg + '</p></div><div class="btns"><a class="closeit" href="javascript:void(0)">确定</a></div></div>'
         }
 
         var $str = $(str)
@@ -46,7 +46,7 @@ $(function () {
                 'margin-left': "-120px"
             }
         })
-        $str.find(".close").click(function () {
+        $str.find(".closeit").click(function () {
             $.unblockUI()
         })
     }
@@ -58,8 +58,9 @@ $(function () {
     }
 
     $("#id_save_btn").click(function () {
-        var nickName = $("#id_nickname").val();
-        var qq = $("#id_qq").val();
+        var projectName = $("#id_pname").val();
+        var projectType = $("#id_ptype").val();
+        var projectUser = $("#id_user").val();
         var mobile = $("#id_mobile").val();
         var weichart = $("#id_weichart").val();
         var email = $("#id_email").val();
@@ -73,22 +74,17 @@ $(function () {
         var gg_zhiwei = false;
         var reg_rule_id = $("#reg_rule_id").attr("class");
         if(reg_rule_id==undefined){
-            showDialog("请您确认已阅读并同意遵守腾讯创业用户注册规则", false);
+            showDialog("请您确认已阅读并同意遵守青春在线创投基金协议", false);
             return false;
         }
         //图片名称啥的
-        if (nullValidate(nickName)) {
-            showDialog("昵称不能为空", false);
+        if (nullValidate(projectName)) {
+            showDialog("项目名称不能为空", false);
             return false;
         }
-        if (nullValidate(qq)) {
-            showDialog("绑定QQ不能为空", false);
+        if (nullValidate(projectUser)) {
+            showDialog("项目联系人不能为空", false);
             return false;
-        }else{
-            if(!(/^[1-9][0-9]{4,9}$/.test(qq))){
-                showDialog("请输入正确的qq号码",false);
-                return false;
-            }
         }
         if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(mobile))){
             showDialog("手机号格式不正确",false);
@@ -102,57 +98,49 @@ $(function () {
             showDialog("联系方式至少填写一种", false);
             return false;
         }
-        if (nullValidate(company)) {
-            showDialog("公司名称不能为空", false);
-            return false;
-        }
-        if (nullValidate(industry)) {
-            showDialog("行业不能为空", false);
-            return false;
-        }
-        if (nullValidate(tdgm)) {
-            showDialog("团队规模不能为空", false);
-            return false;
-        }
-        $(".ggzw").each(function () {
-            var value = $(this).val();
-            if (nullValidate(value)||value=="请填写职位") {
-                gg_zhiwei = true;
+        if(projectType == 0){
+            if (nullValidate(company)) {
+                showDialog("公司名称不能为空", false);
+                return false;
+            }
+            if (nullValidate(industry)) {
+                showDialog("行业不能为空", false);
+                return false;
+            }
+            if (nullValidate(tdgm)) {
+                showDialog("团队规模不能为空", false);
+                return false;
+            }
+            $(".ggzw").each(function () {
+                var value = $(this).val();
+                if (nullValidate(value)||value=="请填写职位") {
+                    gg_zhiwei = true;
+                    showDialog("高管职位不能为空", false);
+                    return false;
+                }
+                ggzws.push(value);
+            })
+            if(gg_zhiwei){
                 showDialog("高管职位不能为空", false);
                 return false;
             }
-            ggzws.push(value);
-        })
-        if(gg_zhiwei){
-            showDialog("高管职位不能为空", false);
-            return false;
-        }
-        var gg_name = false;
-        $(".ggxm").each(function () {
-            var value = $(this).val();
-            if (nullValidate(value)||value=="请填写姓名") {
-                gg_name = true;
+            var gg_name = false;
+            $(".ggxm").each(function () {
+                var value = $(this).val();
+                if (nullValidate(value)||value=="请填写姓名") {
+                    gg_name = true;
+                    showDialog("高管姓名不能为空", false);
+                    return false;
+                }
+                ggmcs.push(value);
+            })
+            if(gg_name) {
                 showDialog("高管姓名不能为空", false);
                 return false;
             }
-            ggmcs.push(value);
-        })
-        if(gg_name) {
-            showDialog("高管姓名不能为空", false);
-            return false;
         }
+
         var image_url = $("[name='upload_relative']").val();
-        var headImageArr  = [];
-        $(".upload_pic_browse").each(function () {
-            var value = $(this).val();
-            headImageArr.push(value);
-        })
-        if(headImageArr==null || headImageArr.length==0){
-            showDialog("头像不能为空", false);
-            return false;
-        }
-        console.log("头像");
-        console.log(headImageArr);
         var fjImageArr = [];
         $(".upload_pic_browse_fj").each(function () {
             var value = $(this).val();
@@ -182,11 +170,12 @@ $(function () {
         })
         $.ajax(
             {
-                url: '/web/user/saveuserinfo',
+                url: 'http://192.168.20.157/youth/project/saveProject',
                 dataType: 'json',
                 data: {
-                    nickName: nickName,
-                    qq: qq,
+                    projectName: projectName,
+                    projectType: projectType,
+                    projectUser: projectUser,
                     mobile: mobile,
                     weichart: weichart,
                     email: email,
@@ -197,8 +186,6 @@ $(function () {
                     tdgm: tdgm,
                     ggzws: ggzws,
                     ggmcs: ggmcs,
-                    image_url:image_url,
-                    headImageArr:headImageArr,
                     fjImageArr:fjImageArr,
                     cptpImageArr:cptpImageArr,
                     cpewmImageArr:cpewmImageArr,
@@ -206,11 +193,11 @@ $(function () {
                 },
                 type: 'post',
                 success: function (data) {
+                    console.log(data);
                     if(data.ret==0) {
                         showDialog("注册成功,我们会在三个工作日内审核您的资料", true);
                         setTimeout(function () {
-                            //window.location.href="/web/";
-                            window.location.href="http://startup.qq.com/web/user/register";
+                            window.location.href="/project/";
                         }, 2000);
                     }else{
                         showDialog(data.msg, false);
@@ -234,9 +221,10 @@ $(function () {
         uploaders[i] = new plupload.Uploader({ //实例化一个plupload上传对象
             browse_button: name,
             runtimes: 'html5,flash,silverlight,html4',
-            url: '/web/user/upload?browse=' + uploaders[i],
-            flash_swf_url: '/js/web/js/Moxie.swf',
-            silverlight_xap_url: '/js/web/js/Moxie.xap',
+            file_data_name: "Filedata",
+            url: 'http://192.168.20.157/youth/models/p_upload.php?browse=' + uploaders[i],
+            flash_swf_url: 'http://192.168.20.157/youth/static/js/Moxie.swf',
+            silverlight_xap_url: 'http://192.168.20.157/youth/static/js/Moxie.xap',
             mydef: uploaders[i],
             filters: {
                 mime_types: [ //只允许上传图片文件
@@ -312,26 +300,25 @@ $(function () {
             }
             resp = resp.response;
             resp = eval('(' + resp + ')');
+            console.log(resp);
             if (resp.ret != 0) {
                 block.css("font-size", "14px").css("color", "red").html("上传失败:" + resp.msg);
             } else {
-                resp.msg = eval('(' + resp.msg + ')');
                 block.parent("div.upload-progress").hide();
                 var form = $("form");
                 if (form.length < 1)return;
                 var relativeValArea = $("input[name='upload_relative']", form);
                 var uploadValArea = $("input[name='upload_pic_"+uploader.settings.mydef+"']", form);
                 if (relativeValArea.length < 1) {
-                    form.append("<input type='hidden' name='upload_relative' value='" + resp.msg.relative + "'>");
+                    form.append("<input type='hidden' name='upload_relative' value='" + resp.key_path + "'>");
                 }
 
                 var uploadedItemEl = $("#file-" + fileId);
                 if (uploadedItemEl.length < 1) return;
-                uploadedItemEl.append("<input type='hidden' class ='upload_pic_"+uploader.settings.mydef+"' name='upload_pic_"+uploader.settings.mydef+"' value='" + resp.msg.pic + "'>");
+                uploadedItemEl.append("<input type='hidden' class ='upload_pic_"+uploader.settings.mydef+"' name='upload_pic_"+uploader.settings.mydef+"' value='" + resp.file_id + "'>");
                 $("#file-" + fileId + " .arm-set-album-cover").show();
                 var imgEl = $("#file-" + fileId + " img");
                 if (imgEl.length < 1) return;
-                //imgEl.attr("src", picServerBase + "/" + resp.msg.relative + "/" + resp.msg.pic_sq);
             }
         });
         function previewImage(file, callback) {//file为plupload事件监听函数参数中的file对象,callback为预览图片准备完成的回调函数
@@ -368,8 +355,17 @@ $(function () {
         return false;
     })
     $("#addGg").click(function () {
-        $(".ggdiv:last").after("<div class='ggdiv fl cl' style='padding-left: 108px;padding-top: 8px;'><input class='ggxm' placeholder='请填写姓名' type='text'/><input  class = 'ggzw' type='text' placeholder='请填写职位'/></div>");
+        $(".ggdiv:last").after("<div class='ggdiv fl cl' style='padding-left: 98px;padding-top: 8px;'><input class='ggxm' placeholder='请填写姓名' type='text'/><input  class = 'ggzw' type='text' placeholder='请填写职位'/></div>");
 
         return false;
+    })
+
+    $('#id_ptype').change(function(){
+        var id = $(this).children('option:selected').val();
+        if(id == 0){
+            $(".company").show();
+        } else {
+            $(".company").hide();
+        }
     })
 })
