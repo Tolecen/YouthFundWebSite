@@ -26,6 +26,12 @@ class project_controller
     {
         include template('project');
     }
+    function item_action()
+    {
+        $id=trim($_GET['id']);
+        $project=getProject($id);
+        include template('project_item');
+    }
     function saveProject_action()
     {
         global $db;

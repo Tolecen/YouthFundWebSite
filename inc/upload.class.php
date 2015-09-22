@@ -80,13 +80,14 @@ class upload
     //检查文件类型
     function checkType()
     {
+        $this->suffpix=$this->getFileType($_FILES[$this->handle]['name']);
+		if('unknown'==$this->suffpix)
+		{
+			$this->error['msg']="文件类型不被允许,只允许上传jpg,gif,png,bmp";
+			$this->error['err']=107;
+			return false;
+		}
         $this->suffpix=$this->get_extension($_FILES[$this->handle]['name']);
-//		if('unknown'==$this->suffpix)
-//		{
-//			$this->error['msg']="文件类型不被允许,只允许上传jpg,gif,png,bmp";
-//			$this->error['err']=107;
-//			return false;
-//		}
         return true;
     }
 
@@ -210,8 +211,8 @@ class upload
                 $fileType = 'png';
                 break;
             case 7790:
-                //$fileType = 'exe';
-                //break;
+                $fileType = 'unknown';
+                break;
             case 7784:
                 $fileType = 'midi';
                 break;
@@ -222,7 +223,7 @@ class upload
                 $fileType = 'doc';
                 break;
             default:
-                $fileType = 'unknown';
+                $fileType = '0';
                 break;
         }
         return $fileType;
