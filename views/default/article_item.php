@@ -124,14 +124,25 @@
 <?php include("footer.php"); ?>
 <script type="text/javascript">
     $(document).ready(function () {
-        /*
-         var defaults = {
-         containerID: 'toTop', // fading element id
-         containerHoverID: 'toTopHover', // fading element hover id
-         scrollSpeed: 1200,
-         easingType: 'linear'
-         };
-         */
+
+        $('.about-section-grid2 img').each(function() {
+            var maxWidth = window.screen.width-60; // 图片最大宽度
+            var ratio = 0;  // 缩放比例
+            var width = $(this).width();    // 图片实际宽度
+            var height = $(this).height();  // 图片实际高度
+
+            // 检查图片是否超宽
+            if(width > maxWidth){
+                ratio = maxWidth / width;   // 计算缩放比例
+                $(this).css("width", maxWidth); // 设定实际显示宽度
+                height = height * ratio;    // 计算等比例缩放后的高度
+                $(this).css("height", height);  // 设定等比例缩放后的高度
+            }
+
+            $(this).css("margin-left", "-2em");
+
+        });
+
 
         $().UItoTop({easingType: 'easeOutQuart'});
 

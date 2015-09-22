@@ -158,7 +158,7 @@ label{
 }
 .news-section-grid .imgintro{
 	width:100%;
-	height: 262.5px;
+	height: 75%;
 	overflow: hidden;
 }
 img.readmore {
@@ -350,6 +350,12 @@ i.news12{
 .top-menu ul li a:hover div.message i.news1{
 	display:block;
 }
+.top-menu2 ul li a:hover div.message i.news{
+	display:none;
+}
+.top-menu2 ul li a:hover div.message i.news1{
+	display:block;
+}
 i.service{
 	width:25px;
 	height:25px;
@@ -384,6 +390,12 @@ i.service12{
 .top-menu ul li a:hover div.ser i.service1{
 	display:block;
 }
+.top-menu2 ul li a:hover div.ser i.service{
+	display:none;
+}
+.top-menu2 ul li a:hover div.ser i.service1{
+	display:block;
+}
 i.about{
 	width:25px;
 	height:25px;
@@ -416,6 +428,12 @@ i.about12{
 	display:none;
 }
 .top-menu ul li a:hover div.abt i.about1{
+	display:block;
+}
+.top-menu2 ul li a:hover div.abt i.about{
+	display:none;
+}
+.top-menu2 ul li a:hover div.abt i.about1{
 	display:block;
 }
 i.works{
@@ -1301,6 +1319,9 @@ i.more{
 	.top-menu ul li a {
 		font-size: 1.1em;
 	}
+	.top-menu2 ul li a {
+		font-size: 1.1em;
+	}
 	.banner {
 		min-height: 380px;
 	}
@@ -1732,6 +1753,31 @@ i.more{
 		width: 100%;
 		padding: 0.5em 0em;
 	}
+	.top-menu2{
+		width:100%;
+		display: none;
+		text-align:center;
+		background:#45c7c9;
+		padding:0;
+		margin-top:10px;
+	}
+	.top-menu2 ul{
+		float:none;
+		width:100%;
+	}
+	.top-menu2 ul li{
+		display:block;
+		float: none;
+	}
+	.top-menu2 ul li a.active {
+		padding: 0.5em 0em;
+	}
+	.top-menu2 ul li a{
+		color:#000;
+		display: block;
+		width: 100%;
+		padding: 0.5em 0em;
+	}
 	.logo {
 		margin-top: 0;
 	}
@@ -1999,7 +2045,7 @@ i.more{
 	}
 	.works-section-grid {
 		margin-top: 1.5em;
-		width: 50%;
+		width: 100%;
 		float: left;
 		padding: 0 8px;
 	}
@@ -2015,10 +2061,10 @@ i.more{
 		padding-top: 1.5em;
 	}
 	.about-section-grid {
-		width: 50%;
+		width: 100%;
 	}
 	.about-section-grid p {
-		height: 85px;
+		height: auto;
 	}
 	.about-section-grid:nth-child(3){
 		display:none;
@@ -2083,11 +2129,14 @@ i.more{
 		min-height: 176px;
 	}
 	.purchase-right {
-		width: 35%;
+		width: 40%;
+        margin-right: 110px;
+        text-align: center;
 		margin-top:1.5em;
 	}
 	.purchase-left {
-		width: 65%;
+		width: 100%;
+        text-align: center;
 		
 	}
 	.purchase-left h4 {
@@ -2211,6 +2260,9 @@ min-height: 140px;
 padding: 20px 0 0 0;
 }
 .top-menu ul li a {
+font-size: 1em;
+}
+.top-menu2 ul li a {
 font-size: 1em;
 }
 .purchase-right a img {

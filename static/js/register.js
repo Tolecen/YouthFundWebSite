@@ -1,5 +1,5 @@
 $(function () {
-    var currentUrl = "http://192.168.20.157/youth/";
+    var currentUrl = "http://192.168.20.157/YouthFundWebSite/";
     // 图片hover 事件
     function imgHover(){
         $('.info-box-uploaded-item').hover(function(){
@@ -170,7 +170,7 @@ $(function () {
         })
         $.ajax(
             {
-                url: 'http://192.168.20.157/youth/project/saveProject',
+                url: 'http://192.168.20.157/YouthFundWebSite/project/saveProject',
                 dataType: 'json',
                 data: {
                     projectName: projectName,
@@ -222,9 +222,9 @@ $(function () {
             browse_button: name,
             runtimes: 'html5,flash,silverlight,html4',
             file_data_name: "Filedata",
-            url: 'http://192.168.20.157/youth/models/p_upload.php?browse=' + uploaders[i],
-            flash_swf_url: 'http://192.168.20.157/youth/static/js/Moxie.swf',
-            silverlight_xap_url: 'http://192.168.20.157/youth/static/js/Moxie.xap',
+            url: 'http://192.168.20.157/YouthFundWebSite/models/p_upload.php?browse=' + uploaders[i],
+            flash_swf_url: 'http://192.168.20.157/YouthFundWebSite/static/js/Moxie.swf',
+            silverlight_xap_url: 'http://192.168.20.157/YouthFundWebSite/static/js/Moxie.xap',
             mydef: uploaders[i],
             filters: {
                 mime_types: [ //只允许上传图片文件

@@ -97,7 +97,7 @@
         <!-- script for menu -->
         <script>
             $("span.menu").click(function () {
-                $(".top-menu").slideToggle("slow", function () {
+                $(".top-menu2").slideToggle("slow", function () {
                     // Animation complete.
                 });
             });
@@ -334,14 +334,15 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            /*
-             var defaults = {
-             containerID: 'toTop', // fading element id
-             containerHoverID: 'toTopHover', // fading element hover id
-             scrollSpeed: 1200,
-             easingType: 'linear'
-             };
-             */
+
+            $('.imgintro img').each(function() {
+                var width = $(this).width();    // 图片实际宽度
+                var ratio = 0.75;   // 计算缩放比例
+                $(this).css("width", width); // 设定实际显示宽度
+                var height = width * ratio;    // 计算等比例缩放后的高度
+                $(this).css("height", height);  // 设定等比例缩放后的高度
+
+            });
 
             $().UItoTop({easingType: 'easeOutQuart'});
 
