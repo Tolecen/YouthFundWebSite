@@ -79,7 +79,7 @@
                 </label>
                 <label class="form-con cb"><h3 class="fl w100">联系方式:</h3>
                     <span
-                        class="fl commom"><?php echo $project['project_user_mobile'];?>(手机)</span></label>
+                        class="fl commom"><?php echo $project['project_user_phone'];?>(手机)</span></label>
                 <label class="form-con cb" style="padding-left: 398px;">
                     <span
                         class="fl commom"><?php echo $project['project_user_email'];?>(邮箱)</span></label>

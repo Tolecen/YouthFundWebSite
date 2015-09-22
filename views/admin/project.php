@@ -63,7 +63,7 @@ if (!defined('IN_PROVERB')) {
                 </TD>
 
                 <TD align="center">
-                    <h5>手机：<?php echo $val['project_user_mobile']; ?></h5>
+                    <h5>手机：<?php echo $val['project_user_phone']; ?></h5>
                     <h5>邮箱：<?php echo $val['project_user_email']; ?></h5>
                     <h5>微信：<?php echo $val['project_user_weixin']; ?></h5>
                 </TD>
