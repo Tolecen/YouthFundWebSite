@@ -17,7 +17,10 @@ class project_controller
 
     function index_action()
     {
-        include template('project');
+        if(isMobile())
+            include template('project_m');
+        else
+            include template('project');
     }
     function regrule_action()
     {
