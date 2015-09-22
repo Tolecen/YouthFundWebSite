@@ -56,7 +56,7 @@ function getfile($file_id)
         $file = array("key" => $bidcmskey, "type" => "image/jpeg", "width" => "180", "height" => "180");
     }
 
-    $fileSuf = strrchr($file['key'],'.');
+    $fileSuf = end(explode('.', $file['key']));
 
     switch ($fileSuf)
     {
