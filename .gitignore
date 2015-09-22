@@ -2,6 +2,8 @@
 # 忽略掉所有文件名是 data 文件夹.
 /data
 data/
+/.idea
+.idea/
 # 忽略所有生成的 html 文件,
 #*.html
 # foo.html是手工维护的，所以例外.
