@@ -4,4 +4,6 @@ RewriteRule ^article/([0-9]+)(/*)$ YouthFundWebSite/index.php?con=article&act=it
 RewriteRule ^article/all(/*)$ YouthFundWebSite/index.php?con=article&act=all
 RewriteRule ^scholarship/([0-9]+)(/*)$ YouthFundWebSite/index.php?con=scholarship&act=item&id=$1
 RewriteRule ^scholarship/all(/*)$ YouthFundWebSite/index.php?con=scholarship&act=all
-
+RewriteRule ^project(/*)$ YouthFundWebSite/index.php?con=project
+RewriteRule ^project/saveProject(/*)$ YouthFundWebSite/index.php?con=project&act=saveProject
+RewriteRule ^project/regrule(/*)$ YouthFundWebSite/index.php?con=project&act=regrule
