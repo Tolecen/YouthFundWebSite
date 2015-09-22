@@ -615,7 +615,6 @@ i.c{
 	font-weight:400;
 	line-height:1.6em;
 	margin:10px 0;
-    text-indent: 2em;
 }
 .about-section-grid2{
 	word-wrap: break-word;
@@ -632,7 +631,6 @@ i.c{
 	font-size:1.2em;
 	line-height:1.6em;
 	margin:10px 0;
-    text-indent: 2em;
 }
 .about-section-head h3{
 	color:#333333;
@@ -2207,7 +2205,9 @@ padding: 2em 0 0 0;
 width: 100%;
 }
 .purchase-right {
-width: 100%;
+width: 40%;
+margin-right: 110px;
+text-align: center;
 margin-top: 1.5em;
 }
 .purchase {

@@ -44,7 +44,9 @@ if (!defined('IN_PROVERB')) {
                     HREF="#">管理首页</A></li>
             <li id="man_nav_2" onclick="list_sub_nav('man_nav_2','新闻动态')" style="outline:none;" class="top_menu"><A
                     HREF="#">新闻动态</A></li>
-            <li id="man_nav_3" onclick="list_sub_nav('man_nav_3','用户管理')" style="outline:none;" class="top_menu"><A
+            <li id="man_nav_3" onclick="list_sub_nav('man_nav_3','项目管理')" style="outline:none;" class="top_menu"><A
+                    HREF="#">项目管理</A></li>
+            <li id="man_nav_4" onclick="list_sub_nav('man_nav_4','用户管理')" style="outline:none;" class="top_menu"><A
                     HREF="#">用户管理</A></li>
         </ul>
     </div>

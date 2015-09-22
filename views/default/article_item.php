@@ -139,8 +139,6 @@
                 $(this).css("height", height);  // 设定等比例缩放后的高度
             }
 
-            $(this).css("margin-left", "-2em");
-
         });
 
 

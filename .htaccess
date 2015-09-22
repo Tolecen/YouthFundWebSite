@@ -1,10 +1,10 @@
 RewriteEngine on
 RewriteBase /
-RewriteRule ^article/([0-9]+)(/*)$ index.php?con=article&act=item&id=$1
-RewriteRule ^article/all(/*)$ index.php?con=article&act=all
-RewriteRule ^scholarship/([0-9]+)(/*)$ index.php?con=scholarship&act=item&id=$1
-RewriteRule ^scholarship/all(/*)$ index.php?con=scholarship&act=all
-RewriteRule ^project(/*)$ index.php?con=project
-RewriteRule ^project/saveProject(/*)$ index.php?con=project&act=saveProject
-RewriteRule ^project/regrule(/*)$ index.php?con=project&act=regrule
-RewriteRule ^project/([0-9]+)(/*)$ index.php?con=project&act=item&id=$1
+RewriteRule ^article/([0-9]+)(/*)$ YouthFundWebSite/index.php?con=article&act=item&id=$1
+RewriteRule ^article/all(/*)$ YouthFundWebSite/index.php?con=article&act=all
+RewriteRule ^scholarship/([0-9]+)(/*)$ YouthFundWebSite/index.php?con=scholarship&act=item&id=$1
+RewriteRule ^scholarship/all(/*)$ YouthFundWebSite/index.php?con=scholarship&act=all
+RewriteRule ^project(/*)$ YouthFundWebSite/index.php?con=project
+RewriteRule ^project/saveProject(/*)$ YouthFundWebSite/index.php?con=project&act=saveProject
+RewriteRule ^project/regrule(/*)$ YouthFundWebSite/index.php?con=project&act=regrule
+RewriteRule ^project/([0-9]+)(/*)$ YouthFundWebSite/index.php?con=project&act=item&id=$1

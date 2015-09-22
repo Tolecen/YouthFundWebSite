@@ -284,6 +284,45 @@ class admin {
         }
     }
 
+    //标签管理
+    function project_action()
+    {
+        $data_mod=new common('project');
+        $id=intval($_REQUEST['id']);
+        if($_REQUEST['type']=='del' && $id>0)
+        {
+            $data_mod->DeleteData('1 and project_id='.$id);
+            sheader ( 'index.php?con=' . $GLOBALS ['setting'] ['adminpath'] . '&act=project', 3, '删除成功', 'redirect', true );
+        } elseif( $_REQUEST['type']=='addUse' && $id>0){
+            $data ['isused'] = 1;
+            $data_mod->UpdateData($data, 'and project_id='.$id);
+            sheader ( 'index.php?con=' . $GLOBALS ['setting'] ['adminpath'] . '&act=project', 3, '修改成功', 'redirect', true );
+        } elseif( $_REQUEST['type']=='delUse' && $id>0){
+            $data ['isused'] = 0;
+            $data_mod->UpdateData($data, 'and project_id='.$id);
+            sheader ( 'index.php?con=' . $GLOBALS ['setting'] ['adminpath'] . '&act=project', 3, '修改成功', 'redirect', true );
+        }
+        else
+        {
+            $container = "";
+            if(!empty($_REQUEST['keyword']))
+            {
+                $container.=' and project_name like "%'.trim(strip_tags($_REQUEST['keyword'])).'%"';
+            }
+            $showpage=array('isshow'=>1,'currentpage'=>intval($_REQUEST['page']),'pagesize'=>20,'url'=>'index.php?con='.$GLOBALS['setting']['adminpath'].'&act=project','example'=>2);
+            $taglist=$data_mod->GetPage($showpage,$container,"","","ORDER BY project_id DESC");
+            $dataCount = count($taglist['data']);
+            if($dataCount > 0){
+                $projectGroup = array();
+                for($i=0; $i<$dataCount; $i++){
+                    $projectGroup[] = $taglist['data'][$i];
+                }
+                $taglist['data'] = $projectGroup;
+            }
+            include ROOT_PATH.'/views/admin/project.php';
+        }
+    }
+
     /**
      *添加标签
      */
