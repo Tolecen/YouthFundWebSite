@@ -70,7 +70,7 @@ if (!defined('IN_PROVERB')) {
             <tr>
                 <td>封面</td>
                 <td height="160">
-                    <input type="hidden" size="30" id="tag_file_id" class="input-text" value="<?php echo $tag['file_id'];?>" name="tag_file_id">
+                    <input type="hidden" size="30" id="tag_file_id" class="input-text" value="<?php echo $media['file_id'];?>" name="tag_file_id">
                     <script type="text/javascript">
                         var swfu;
 
@@ -116,7 +116,26 @@ if (!defined('IN_PROVERB')) {
                         };
                     </script>
                     <form id="pin_multi_form" action="" method="post" enctype="multipart/form-data">
-                        <div id="fsUploadProgress" class="fieldset flash"></div>
+                        <div id="fsUploadProgress" class="fieldset flash">
+                            <?php if(isset($media['file_id']) && $media['file_id'] > 0){;?>
+                                <div class="progressWrapper" id="SWFUpload_0_0" style="opacity: 1;">
+                                    <div class="progressContainer blue">
+                                        <a style="visibility: hidden;"></a>
+                                        <a class="delImage" href="#" onclick="$('.progressWrapper').remove(); $('#tag_file_id').val(0);" title="删除" style="visibility: visible;">删除</a>
+                                        <div class="progressBarStatus">
+                                            <span class="photo-thumb"><img width="150" src="http://192.168.20.157/YouthFundWebSite/data/upload/75f4ea5d4f3bedac2de7abb042728d67.gif" /></span>
+                                            <input type="hidden" name="file_id" value="1469" class="img_ids" />
+                                        </div>
+                                        <div class="progressBarComplete">
+                                            &nbsp;
+                                        </div>
+                                        <div class="progressBarInProgress" style="width: 0%;"></div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+
+
                         <span id="spanButtonPlaceHolder"></span>
                     </form>
 

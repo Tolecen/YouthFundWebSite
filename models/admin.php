@@ -333,6 +333,7 @@ class admin {
 
         $updateid = intval ( $_REQUEST ['updateid'] );
         $media_mod = new common ( 'topic' );
+        $file_mod = new common ( 'file' );
         $tag = array ();
         if (submitcheck ( 'commit' )) {
 
@@ -368,6 +369,7 @@ class admin {
         } else {
             if ($updateid) {
                 $media = $media_mod->GetOne ( 'and topic_id=' . $updateid );
+                $media['file'] = $file_mod->GetOne( 'and file_id=' . $media['file_id'] );
             }
             include ROOT_PATH . '/views/admin/media_form.php';
         }
