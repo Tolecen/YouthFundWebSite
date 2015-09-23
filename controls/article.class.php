@@ -29,6 +29,10 @@ class article_controller
 //        else
             include template('article_item');
     }
+    function team_action()
+    {
+        include template('team_index');
+    }
     function all_action()
     {
         $topics = getAllTopics();
