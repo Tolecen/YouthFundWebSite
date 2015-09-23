@@ -123,8 +123,8 @@ if (!defined('IN_PROVERB')) {
                                         <a style="visibility: hidden;"></a>
                                         <a class="delImage" href="#" onclick="$('.progressWrapper').remove(); $('#tag_file_id').val(0);" title="删除" style="visibility: visible;">删除</a>
                                         <div class="progressBarStatus">
-                                            <span class="photo-thumb"><img width="150" src="http://192.168.20.157/YouthFundWebSite/data/upload/75f4ea5d4f3bedac2de7abb042728d67.gif" /></span>
-                                            <input type="hidden" name="file_id" value="1469" class="img_ids" />
+                                            <span class="photo-thumb"><img width="150" src="<?php echo $GLOBALS['app']['scheme'];?>://<?php echo $GLOBALS['app']['host'];?>/<?php echo $media['file']['host'].$media['file']['file_path'].$media['file']['file_original']; ?>" /></span>
+                                            <input type="hidden" name="file_id" value="<?php echo $media['file_id'];?>" class="img_ids" />
                                         </div>
                                         <div class="progressBarComplete">
                                             &nbsp;
