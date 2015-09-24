@@ -24,7 +24,7 @@ class project_controller
     }
     function regrule_action()
     {
-        include template('project');
+        include template('project_regrule');
     }
     function item_action()
     {

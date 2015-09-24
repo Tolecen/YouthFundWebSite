@@ -11,9 +11,9 @@
                 <p>关注官方微信</p>
             </div>
             <div class="col-md-2 footer-top-left">
-                <a href="#"><img
-                        src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/wqcode.jpg"
-                        alt="" width="150"/></a>
+                <img
+                        src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/icon_weibo.png"
+                        alt="" width="150"/>
 
                 <p>扫描</p>
 
@@ -24,7 +24,7 @@
                 <ul>
                     <li>
                     <li><i class="weibo"></i></li>
-                    <li><p>点击关注新浪微博 </p></li>
+                    <li><a target="_blank" href="http://weibo.com/qingchunzaixianjijin">点击关注新浪微博 </a></li>
                     </li>
                 </ul>
                 <ul>

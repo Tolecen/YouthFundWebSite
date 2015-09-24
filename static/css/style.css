@@ -1079,6 +1079,10 @@ i.flickr{
     width: 100%;
     text-align: center;
 }
+.footer-top-left img{
+    width: 100%;
+    text-align: center;
+}
 .footer-top-right{
 	float:right;
 }
