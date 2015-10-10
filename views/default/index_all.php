@@ -238,7 +238,7 @@
 
                     <p>现任AutoKol联合创始人、媒体事业部总经理，青春在线奖学金创始发起人、投资人...</p>
                     <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/0"><i
-                            class="more"></i>更多</a>
+                            class="more"></i>详情</a>
                 </div>
                 <div class="col-md-2 works-section-grid">
                     <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/1"><img
@@ -248,7 +248,7 @@
 
                     <p>现任翠辉珠宝有限公司董事长兼总经理，翡翠玉石论坛、翡翠之家、翠辉珠宝创始人，是青春在线奖学金创始发起人、投资人... </p>
                     <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/1"><i
-                            class="more"></i>更多</a>
+                            class="more"></i>详情</a>
                 </div>
                 <div class="col-md-2 works-section-grid">
                     <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/2"><img
@@ -258,7 +258,7 @@
 
                     <p>现为青春在线创投基金创始人、执行事务合伙人，更生之火校友基金创始人、执行事务合伙人，I律师创始人、CEO，是青春在线奖学金创始发起人、投资人，乐山市更生学校火魂奖学金创始发起人、投资人...</p>
                     <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/2"><i
-                            class="more"></i>更多</a>
+                            class="more"></i>详情</a>
                 </div>
                 <div class="col-md-2 works-section-grid">
                     <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/3"><img
@@ -268,7 +268,7 @@
 
                     <p>现为青春在线创投基金合伙人，北京爱天平信息技术服务有限公司股东、I律师联合创始人、COO，是青春在线奖学金创始发起人、投资人...</p>
                     <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/3"><i
-                            class="more"></i>更多</a>
+                            class="more"></i>详情</a>
                 </div>
                 <div class="col-md-2 works-section-grid">
                     <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/4"><img
@@ -278,7 +278,7 @@
 
                     <p>现任淄博卡哥投资咨询有限公司总经理、北京爱天平信息技术服务有限公司股东、I律师联合创始人、CFO，是青春在线奖学金创始发起人、投资人...</p>
                     <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/4"><i
-                            class="more"></i>更多</a>
+                            class="more"></i>详情</a>
                 </div>
                 <div class="clearfix"></div>
             </div>
