@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>青春在线创投基金协议-<?php echo $GLOBALS['setting']['site_title']; ?></title>
+    <link rel="shortcut icon" href="/favicon.ico" />
     <link
         href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/css/bootstrap.css"
         rel='stylesheet' type='text/css'/>
