@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title><?php echo $article['topic_name']; ?>-<?php echo $GLOBALS['setting']['site_title']; ?></title>
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -17,7 +17,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="<?php echo $GLOBALS['setting']['seo_keyword']; ?>">
     <meta name="description"
-          content="<?php echo $article['topic_intro']; ?>---<?php echo $GLOBALS['setting']['seo_description']; ?>">
+          content="<?php if(count($article['topic_intro']) > 0) { echo $article['topic_intro']; } else { echo substr($article['topic_desc'], 0, 100); } ?>--<?php echo $GLOBALS['setting']['seo_description']; ?>">
     <script type="application/x-javascript"> addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
         }, false);
@@ -109,10 +109,9 @@
 <div class="about-section" id="about">
     <div class="container">
         <div class="about-section-head text-center">
-            <h3><?php echo $article['topic_name']; ?></h3>
-
-            <p><?php echo date('Y-m-d', $article['created_time']); ?></p>
-            <span></span>
+            <h3 class="col-md-12 <?php if(isMobile()){ ?> text-left <?php } ?>"><?php echo $article['topic_name']; ?></h3>
+            <p class="col-md-12"><?php echo date('Y-m-d', $article['created_time']); ?></p>
+            <span style="vertical-align: top"></span>
         </div>
         <div class="about-section-grids2">
             <div class="col-md-12 about-section-grid2">

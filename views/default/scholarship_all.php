@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?php echo $GLOBALS['setting']['site_title']; ?></title>
+    <title>青春在线奖学金-<?php echo $GLOBALS['setting']['site_title']; ?></title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <link href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="<?php echo $GLOBALS['setting']['seo_keyword']; ?>">
-    <meta name="description" content="<?php echo $GLOBALS['setting']['seo_description']; ?>">
+    <meta name="description" content="青春在线奖学金，是受山东理工大学领导老师特别是迟沂军老师感召，由山东理工大学校友、青春在线站友刘杰、伏彦、李燕、马智、王嘉共同倡议、发起，凡是在山东理工大学青春在线网站工作过的站友、各届校友及社会友爱人士，均可成为该奖学金的赞助人。--<?php echo $GLOBALS['setting']['seo_description']; ?>">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!--webfont-->
     <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>

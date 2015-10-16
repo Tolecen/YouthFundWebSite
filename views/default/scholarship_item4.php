@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="<?php echo $GLOBALS['setting']['seo_keyword']; ?>">
-    <meta name="description" content="<?php echo $GLOBALS['setting']['seo_description']; ?>">
+    <meta name="description" content="计算机科学与技术学院2002级计算机科学与技术专业本科毕业，理学学士。大学期间，担任山东理工大学学生工作部（处）青春在线网站第二届技术部副主任、计算机学院社团联合会主席、计算机协会主席。--<?php echo $GLOBALS['setting']['seo_description']; ?>">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!--webfont-->
     <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>

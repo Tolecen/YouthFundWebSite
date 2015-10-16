@@ -27,10 +27,12 @@
                     <li><a target="_blank" href="http://weibo.com/qingchunzaixianjijin">点击关注新浪微博 </a></li>
                     </li>
                 </ul>
+                <!--
                 <ul>
                     <li><i class="phone"></i></li>
                     <li><p>256.478.3252 </p></li>
                 </ul>
+                -->
                 <ul>
                     <li><i class="msg"></i></li>
                     <li><a href="2635454227@qq.com">2635454227@qq.com</a></li>
