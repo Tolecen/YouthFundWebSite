@@ -227,7 +227,7 @@
                               href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/all">查看详情
                         ></a></h3>
 
-                <p>山东理工大学站友发起，重视创新、创业的各界人士共同投资、运营</p>
+                <p>山东理工大学校友发起，重视创新、创业的各界人士共同投资、运营</p>
                 <span></span>
             </div>
             <div class="works-section-grids">
