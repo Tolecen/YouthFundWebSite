@@ -3,7 +3,7 @@
         <div class="container">
             <div class="col-md-2 footer-top-left">
                 <a href="#"><img
-                        src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/wqcode.jpg"
+                        src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/icon_weixin.png"
                         alt="" width="150"/></a>
 
                 <p>扫描</p>
