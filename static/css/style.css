@@ -209,6 +209,7 @@ img.readmore {
 }
 .info h5{
 	color:#fff;
+	height:36px;
 	font-weight:400;
 	font-size:1.1em;
 }
@@ -228,6 +229,20 @@ img.readmore {
 	line-height:1.6em;
 	margin-bottom:1.5em;
 }
+
+.info h5 a {
+	color:#fff;
+	font-size:14px;
+	padding:0em;
+	border:0px;
+	border-radius:0px;
+	text-decoration:none;
+	background: #44A9FA;
+}
+.info h5 a:hover {
+	background: #44A9FA;
+}
+
 .info a {
 	color:#fff;
 	font-size:0.9em;

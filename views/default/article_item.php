@@ -109,7 +109,7 @@
 <div class="about-section" id="about">
     <div class="container">
         <div class="about-section-head text-center">
-            <h3 class="col-md-12 <?php if(isMobile()){ ?> text-left <?php } ?>"><?php echo $article['topic_name']; ?></h3>
+            <h3 class="col-md-12 text-left"><?php echo $article['topic_name']; ?></h3>
             <p class="col-md-12"><?php echo date('Y-m-d', $article['created_time']); ?></p>
             <span style="vertical-align: top"></span>
         </div>

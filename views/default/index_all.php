@@ -180,7 +180,7 @@
                         </div>
 
                         <div class="info">
-                            <h5><?php echo $topics[$i]["topic_name"]; ?></h5>
+                            <h5><a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/article/<?php echo $topics[$i]["topic_id"]; ?>"><?php echo $topics[$i]["topic_name"]; ?></a></h5>
                             <label><?php echo date('Y-m-d', $topics[$i]["created_time"]); ?></label>
 
                             <p><?php echo $topics[$i]["topic_intro"]; ?></p>
