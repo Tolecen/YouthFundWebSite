@@ -169,13 +169,14 @@
                     <div class="col-md-4 news-section-grid">
                         <div class="imgintro">
                             <?php if(empty($topics[$i]['file']['key'])) { ?>
-                                <img
+                                <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/article/<?php echo $topics[$i]["topic_id"]; ?>"><img
                                     src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/placeholder_album.jpg"
-                                    alt=""/>
+                                    alt=""/></a>
                             <?php } else { ?>
+								<a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/article/<?php echo $topics[$i]["topic_id"]; ?>">
                                 <img
                                     src="<?php echo $topics[$i]['file']['host'] . $topics[$i]['file']['path'] . $topics[$i]['file']['key']; ?>"
-                                    alt=""/>
+                                    alt=""/></a>
                             <?php } ?>
                         </div>
 
