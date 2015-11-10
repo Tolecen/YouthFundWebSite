@@ -238,7 +238,7 @@
                         alt="" style="border-radius: 268px" border="0"/></a>
                     <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/0"><h4>刘杰</h4></a>
 
-                    <p>现任AutoKol联合创始人、媒体事业部总经理，青春在线奖学金创始发起人、投资人...</p>
+                    <p>笨鸟网、车图腾创始人，青春在线奖学金创始发起人、投资人...</p>
                     <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/0"><i
                             class="more"></i>详情</a>
                 </div>
