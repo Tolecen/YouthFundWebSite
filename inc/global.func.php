@@ -520,6 +520,42 @@ function _upload($upfile)
     return $up;
 }
 
+//单个上传
+function _uploadYPY($upfile)
+{
+    global $db, $bidcmskey;
+    $up = new upload($upfile);
+    $upyun = new UpYun("imgbuket", "tolecen", "11311451167llx");
+    $c = "abcdefghigklmnopqrstuvwxyz0123456789";
+    $d = substr($c, rand(0, 20), 2) . '/' . substr($c, rand(0, 10), 2);
+    $dir = 'data/upload';
+    $uploaddir = ROOT_PATH . '/' . $dir;
+    $up->max_upload = 10486000;
+    $up->insertid = array();
+    $up->updir = $uploaddir ? $uploaddir : 'data/upload';
+    $img = array();
+    $imgtype = array('jpg' => '0', 'gif' => '1', 'png' => '2', 'bmp' => '3');
+    if ($up->checkIsFile() && $up->checkStatus() && $up->checkType() && $up->checkSize()) {
+        if ($file = $up->execute()) {
+            $r = getimagesize($file);
+            $filePath = str_replace(ROOT_PATH, "", $uploaddir) . "/";
+            $pos = strrpos($file, '/') + 1;
+            $fileName = substr($file, $pos);
+            $filekey = $bidcmskey . $imgtype[$up->suffpix] . $up->fname[0] . str_replace('/', '', $d);
+
+            $fh = fopen($uploaddir."/".$fileName,'r');
+            $upyun->writeFile("/".$fileName, $fh);
+            fclose($fh);
+            if(is_file($uploaddir."/".$fileName)){
+                @unlink($uploaddir."/".$fileName);
+            }
+            $db->query("insert into " . tname("file") . "(`file_key`, `file_path`, `file_original`, `file_type`, `width`, `height`)values('".$filekey."','" .$filePath . "','" . $fileName . "','" . $r['mime'] . "','" . $r['0'] . "','" . $r[1] . "')");
+            $up->insertid = array('file_id' => $db->insert_id(), 'key_path' => $filePath, 'key' => $fileName, 'type' => $r['mime'], 'width' => $r[0], 'height' => $r[1]);
+        }
+    }
+    return $up;
+}
+
 //获取远程图片
 function _loadimg($url)
 {

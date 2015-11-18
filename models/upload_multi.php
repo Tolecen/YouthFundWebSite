@@ -19,6 +19,7 @@ if($file['file_id']>0)
     $img['success']=true;
     $img['msg']="上传成功";
     $img['file_path']=$GLOBALS['app']['scheme']."://".$GLOBALS['app']['host']."/".$file['key_path'].$file['key'];
+//    $img['file_path']="http://image.mengbaopai.com/".$file['key'];
 }
 else
 {
