@@ -9,6 +9,10 @@ t=outlookbar.addtitle('新闻动态','新闻动态',1)
 outlookbar.additem('新闻管理',t,'index.php?con='+adminpath+'&act=media')
 outlookbar.additem('添加新闻',t,'index.php?con='+adminpath+'&act=mediamodify');
 
+t=outlookbar.addtitle('奖学金管理','奖学金管理',1)
+outlookbar.additem('奖学金管理',t,'index.php?con='+adminpath+'&act=zhiku')
+outlookbar.additem('添加奖学金',t,'index.php?con='+adminpath+'&act=zhikumodify');
+
 t=outlookbar.addtitle('项目管理','项目管理',1)
 outlookbar.additem('项目管理',t,'index.php?con='+adminpath+'&act=project')
 

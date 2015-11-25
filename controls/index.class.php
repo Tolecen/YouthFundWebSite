@@ -18,6 +18,7 @@ class index_controller
     function index_action()
     {
         $topics = getAllTopics(0, "and isused=1", "", 3);
+        $zhiku = getAllZhiku(0, "", "", 5);
         include template('index_all');
     }
     function cate_action()

@@ -232,6 +232,24 @@
                 <span></span>
             </div>
             <div class="works-section-grids">
+                <?php if(count($zhiku) > 0) { ?>
+                <?php for ($i = 0; $i < count($zhiku); $i++) { ?>
+
+                        <div class="col-md-2 works-section-grid">
+                            <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/<?php echo $zhiku[$i]["topic_id"]; ?>"><img
+                                    src="<?php echo $zhiku[$i]['file']['host'] . $zhiku[$i]['file']['path'] . $zhiku[$i]['file']['key']; ?>"
+                                    alt="" style="border-radius: 268px" border="0"/></a>
+                            <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/<?php echo $zhiku[$i]["topic_id"]; ?>"><h4><?php echo $zhiku[$i]["topic_name"]; ?></h4></a>
+
+                            <p><?php echo $zhiku[$i]["topic_intro"]; ?></p>
+                            <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/<?php echo $zhiku[$i]["topic_id"]; ?>"><i
+                                    class="more"></i>详情</a>
+                        </div>
+
+
+                <?php } ?>
+                <?php } else { ?>
+
                 <div class="col-md-2 works-section-grid">
                     <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/0"><img
                         src="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/static/images/avatar001.jpg"
@@ -282,6 +300,7 @@
                     <a href="<?php echo $GLOBALS['app']['scheme']; ?>://<?php echo $GLOBALS['app']['host']; ?>/scholarship/4"><i
                             class="more"></i>详情</a>
                 </div>
+                <?php } ?>
                 <div class="clearfix"></div>
             </div>
         </div>

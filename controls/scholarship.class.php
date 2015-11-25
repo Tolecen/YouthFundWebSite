@@ -40,6 +40,10 @@ class scholarship_controller
             case 4:
                 include template('scholarship_item4');
                 break;
+            default:
+                $article=getZhiku($id);
+                include template('scholarship_item');
+                break;
         }
 
 

@@ -375,6 +375,97 @@ class admin {
         }
     }
 
+    //标签管理
+    function zhiku_action()
+    {
+        $data_mod=new common('zhiku');
+        $id=intval($_REQUEST['id']);
+        if($_REQUEST['type']=='del' && $id>0)
+        {
+            $data_mod->DeleteData('1 and topic_id='.$id);
+            sheader ( 'index.php?con=' . $GLOBALS ['setting'] ['adminpath'] . '&act=zhiku', 3, '删除成功', 'redirect', true );
+        } elseif( $_REQUEST['type']=='addUse' && $id>0){
+            $data ['isused'] = 1;
+            $data_mod->UpdateData($data, 'and topic_id='.$id);
+            sheader ( 'index.php?con=' . $GLOBALS ['setting'] ['adminpath'] . '&act=zhiku', 3, '修改成功', 'redirect', true );
+        } elseif( $_REQUEST['type']=='delUse' && $id>0){
+            $data ['isused'] = 0;
+            $data_mod->UpdateData($data, 'and topic_id='.$id);
+            sheader ( 'index.php?con=' . $GLOBALS ['setting'] ['adminpath'] . '&act=zhiku', 3, '修改成功', 'redirect', true );
+        }
+        else
+        {
+            $container = "";
+            if(!empty($_REQUEST['keyword']))
+            {
+                $container.=' and topic_name like "%'.trim(strip_tags($_REQUEST['keyword'])).'%"';
+            }
+            $showpage=array('isshow'=>1,'currentpage'=>intval($_REQUEST['page']),'pagesize'=>20,'url'=>'index.php?con='.$GLOBALS['setting']['adminpath'].'&act=zhiku','example'=>2);
+            $taglist=$data_mod->GetPage($showpage,$container,"","","ORDER BY topic_id DESC");
+            $dataCount = count($taglist['data']);
+            if($dataCount > 0){
+                $zhikuGroup = array();
+                for($i=0; $i<$dataCount; $i++){
+                    $zhikuGroup[] = $taglist['data'][$i];
+                }
+                $taglist['data'] = $zhikuGroup;
+            }
+            include ROOT_PATH.'/views/admin/zhiku.php';
+        }
+    }
+
+    /**
+     *添加标签
+     */
+
+    function zhikumodify_action() {
+
+        global $session;
+
+        $updateid = intval ( $_REQUEST ['updateid'] );
+        $zhiku_mod = new common ( 'zhiku' );
+        $file_mod = new common ( 'file' );
+        $tag = array ();
+        if (submitcheck ( 'commit' )) {
+
+
+//              `topic_id` bigint(20) NOT NULL AUTO_INCREMENT,
+//              `topic_name` varchar(20) NOT NULL COMMENT '文章名称',
+//              `isused` tinyint(1) NOT NULL COMMENT '是否关闭',
+//              `topic_desc` TEXT NOT NULL COMMENT '文章内容',
+//              `topic_tag` varchar(20) NOT NULL COMMENT '话题标语',
+//              `created_time`
+
+            $data ['topic_name'] = $_POST['topic_name'];
+            $data ['topic_desc'] = $_POST['topic_desc'];
+            $data ['topic_intro'] = $_POST['topic_intro'];
+            $data ['file_id'] = $_POST['file_id'];
+
+            if(intval($data['file_id']) < 1)
+                $data ['file_id'] = $_POST['tag_file_id'];
+
+
+            if ($updateid > 0) {
+                if ($zhiku_mod->UpdateData ( $data, 'and topic_id=' . $updateid )) {
+                    sheader ( 'index.php?con=' . $GLOBALS ['setting'] ['adminpath'] . '&act=zhiku', 3, '修改成功', 'redirect', true );
+                } else {
+                    sheader ( 'index.php?con=' . $GLOBALS ['setting'] ['adminpath'] . '&act=zhiku', 3, '修改失败', 'redirect', true );
+                }
+            } else {
+                $data ['created_time'] = time();
+                if ($zhiku_mod->InsertData ( $data )) {
+                    sheader ( 'index.php?con=' . $GLOBALS ['setting'] ['adminpath'] . '&act=zhiku', 3, '添加成功', 'redirect', true );
+                }
+            }
+        } else {
+            if ($updateid) {
+                $zhiku = $zhiku_mod->GetOne ( 'and topic_id=' . $updateid );
+                $zhiku['file'] = $file_mod->GetOne( 'and file_id=' . $zhiku['file_id'] );
+            }
+            include ROOT_PATH . '/views/admin/zhiku_form.php';
+        }
+    }
+
 	//ajax修改添加处理
 	function admin_ajax_action() {
 		$key = empty ( $_GET ['primarykey'] ) ? 'id' : $_GET ['primarykey'];
